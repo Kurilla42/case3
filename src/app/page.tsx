@@ -10,6 +10,7 @@ import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { Team } from '@/components/sections/Team';
 import { Stats } from '@/components/sections/Stats';
 import { ReviewsMarquee } from '@/components/sections/ReviewsMarquee';
+import { ServiceAreas } from '@/components/sections/ServiceAreas';
 import { FAQ } from '@/components/sections/FAQ';
 import { Contact } from '@/components/sections/Contact';
 import { Footer } from '@/components/sections/Footer';
@@ -31,6 +32,7 @@ export default function LandingPage() {
       <Team />
       <Stats />
       <ReviewsMarquee />
+      <ServiceAreas />
       <FAQ />
       <Contact />
       <Footer />
