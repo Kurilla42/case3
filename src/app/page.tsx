@@ -4,6 +4,7 @@ import { Hero } from '@/components/sections/Hero';
 import { EmergencyStrip } from '@/components/sections/EmergencyStrip';
 import { Services } from '@/components/sections/Services';
 import { CostEstimator } from '@/components/sections/CostEstimator';
+import { Process } from '@/components/sections/Process';
 import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { Stats } from '@/components/sections/Stats';
 import { Testimonials } from '@/components/sections/Testimonials';
@@ -22,6 +23,7 @@ export default function LandingPage() {
       <EmergencyStrip />
       <Services />
       <CostEstimator />
+      <Process />
       <BeforeAfter />
       <Stats />
       <Testimonials />
