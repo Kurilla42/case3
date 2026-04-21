@@ -39,3 +39,14 @@ export interface PromoOffer {
   code: string;
   expires?: string;
 }
+
+export interface Technician {
+  id: string;
+  name: string;
+  role: string;
+  yearsExperience: number;
+  photoUrl: string;
+  certifications: string[];
+  specialties: string[];
+  quote: string;
+}

@@ -1,4 +1,4 @@
-import { Service, Review, FAQ, Office, PromoOffer } from './types';
+import { Service, Review, FAQ, Office, PromoOffer, Technician } from './types';
 
 export const COMPANY_INFO = {
   name: 'Thelen Plumbing, Heating, and Air',
@@ -144,5 +144,50 @@ export const OFFERS: PromoOffer[] = [
     title: '$50 Off First Service',
     description: 'Valid for new residential customers on any repair over $250.',
     code: 'WELCOME50',
+  },
+];
+
+export const TECHNICIANS: Technician[] = [
+  {
+    id: 'tech-1',
+    name: 'Taylor',
+    role: 'Lead Plumber',
+    yearsExperience: 12,
+    photoUrl: 'https://picsum.photos/seed/tech-taylor/800/1066',
+    certifications: [
+      'MN Master Plumber #PM123456',
+      'Gas Piping Certified',
+      'Backflow Assembly Tester',
+    ],
+    specialties: ['Tankless Water Heaters', 'Gas Lines', 'Boilers'],
+    quote: "If I wouldn't do it in my own house, I won't sell it to yours.",
+  },
+  {
+    id: 'tech-2',
+    name: 'Mike',
+    role: 'Senior HVAC Tech',
+    yearsExperience: 9,
+    photoUrl: 'https://picsum.photos/seed/tech-mike/800/1066',
+    certifications: [
+      'EPA 608 Universal',
+      'NATE Certified',
+      'High Efficiency Systems Specialist',
+    ],
+    specialties: ['Furnace Repair', 'AC Installation', 'Heat Pumps'],
+    quote: "Precision isn't just a goal; it's the standard for every home I enter.",
+  },
+  {
+    id: 'tech-3',
+    name: 'Sarah',
+    role: 'Service Manager',
+    yearsExperience: 8,
+    photoUrl: 'https://picsum.photos/seed/tech-sarah/800/1066',
+    certifications: [
+      'Advanced Customer Service Lead',
+      'Operational Efficiency Expert',
+      'Safety & Compliance Officer',
+    ],
+    specialties: ['System Diagnostics', 'Project Management', 'Quality Assurance'],
+    quote: "My job is to ensure every service call ends with a homeowner breathing a sigh of relief.",
   },
 ];

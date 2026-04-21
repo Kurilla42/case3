@@ -6,6 +6,7 @@ import { Services } from '@/components/sections/Services';
 import { CostEstimator } from '@/components/sections/CostEstimator';
 import { Process } from '@/components/sections/Process';
 import { BeforeAfter } from '@/components/sections/BeforeAfter';
+import { Team } from '@/components/sections/Team';
 import { Stats } from '@/components/sections/Stats';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { FAQ } from '@/components/sections/FAQ';
@@ -25,6 +26,7 @@ export default function LandingPage() {
       <CostEstimator />
       <Process />
       <BeforeAfter />
+      <Team />
       <Stats />
       <Testimonials />
       <FAQ />
