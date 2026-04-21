@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
-import { EmergencyCallout } from '@/components/sections/EmergencyCallout';
+import { EmergencyStrip } from '@/components/sections/EmergencyStrip';
 import { Services } from '@/components/sections/Services';
 import { Stats } from '@/components/sections/Stats';
 import { Testimonials } from '@/components/sections/Testimonials';
@@ -18,7 +17,7 @@ export default function LandingPage() {
     <main className="relative min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
-      <EmergencyCallout />
+      <EmergencyStrip />
       <Services />
       <Stats />
       <Testimonials />
