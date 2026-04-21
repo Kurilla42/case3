@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -34,10 +34,10 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // SCROLLED COLORS: Background #F5F1EA (39 31% 94%), Foreground #0F1419 (Close to 210 25% 8%)
   const bgColor = isScrolled ? 'rgba(245, 241, 234, 0.95)' : 'rgba(245, 241, 234, 0)';
-  const textColorClass = isScrolled ? 'text-foreground' : 'text-white';
-  const logoColorClass = isScrolled ? 'text-foreground' : 'text-white';
+  // Adjusted to foreground (dark) for light Hero background visibility
+  const textColorClass = isScrolled ? 'text-foreground' : 'text-foreground';
+  const logoColorClass = isScrolled ? 'text-foreground' : 'text-foreground';
 
   return (
     <motion.header
@@ -76,7 +76,7 @@ export const Header = () => {
             className={cn("font-bold border-2 transition-all duration-300 h-12 px-6", 
               isScrolled 
                 ? "border-foreground text-foreground hover:bg-foreground hover:text-background" 
-                : "border-white text-white hover:bg-white hover:text-primary"
+                : "border-foreground text-foreground hover:bg-foreground hover:text-background"
             )}
             asChild
           >
@@ -99,7 +99,6 @@ export const Header = () => {
               </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full sm:max-w-md p-0 flex flex-col bg-background">
-              {/* Drawer Header */}
               <div className="p-6 flex items-center justify-between border-b">
                 <span className="font-headline text-2xl text-foreground">THELEN</span>
                 <SheetClose className="p-2 rounded-full bg-muted/20 hover:bg-muted/40 transition-colors">
@@ -107,7 +106,6 @@ export const Header = () => {
                 </SheetClose>
               </div>
 
-              {/* Navigation as Large Buttons */}
               <div className="flex-1 overflow-y-auto py-10 px-6 space-y-4">
                 {navItems.map((item) => (
                   <SheetClose key={item.name} asChild>
@@ -121,7 +119,6 @@ export const Header = () => {
                 ))}
               </div>
 
-              {/* Sticky Bottom CTAs */}
               <div className="p-6 bg-white border-t space-y-4 shadow-[0_-10px_20px_-10px_rgba(0,0,0,0.1)]">
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button variant="outline" className="flex-1 py-7 border-2 border-dark font-headline text-dark text-lg" asChild>
@@ -136,7 +133,7 @@ export const Header = () => {
                 </div>
                 <div className="text-center text-sm font-medium pt-2 flex items-center justify-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
-                  Big Lake MN · Licensed & Insured
+                  Twin Cities · Licensed & Insured
                 </div>
               </div>
             </SheetContent>
