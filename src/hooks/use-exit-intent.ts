@@ -7,8 +7,13 @@ export function useExitIntent() {
 
   useEffect(() => {
     const handleMouseOut = (e: MouseEvent) => {
-      if (e.clientY <= 0 || e.relatedTarget === null || (e.target as HTMLElement).nodeName === 'HTML') {
-        setIsExiting(true);
+      // Logic: mouse leaves top of viewport
+      if (e.clientY <= 0 || e.relatedTarget === null) {
+        const hasShown = sessionStorage.getItem('exit-intent-shown');
+        if (!hasShown) {
+          setIsExiting(true);
+          sessionStorage.setItem('exit-intent-shown', 'true');
+        }
       }
     };
 
