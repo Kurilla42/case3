@@ -12,7 +12,7 @@ import { Stats } from '@/components/sections/Stats';
 import { ReviewsMarquee } from '@/components/sections/ReviewsMarquee';
 import { ServiceAreas } from '@/components/sections/ServiceAreas';
 import { FAQ } from '@/components/sections/FAQ';
-import { Contact } from '@/components/sections/Contact';
+import { FinalCta } from '@/components/sections/FinalCta';
 import { Footer } from '@/components/sections/Footer';
 import { StickyMobileCTA } from '@/components/floating/StickyMobileCTA';
 import { AIChatbot } from '@/components/floating/AIChatbot';
@@ -34,7 +34,7 @@ export default function LandingPage() {
       <ReviewsMarquee />
       <ServiceAreas />
       <FAQ />
-      <Contact />
+      <FinalCta />
       <Footer />
       
       {/* Floating UI Elements */}
