@@ -3,6 +3,7 @@ import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
 import { EmergencyStrip } from '@/components/sections/EmergencyStrip';
 import { Services } from '@/components/sections/Services';
+import { CostEstimator } from '@/components/sections/CostEstimator';
 import { Stats } from '@/components/sections/Stats';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { FAQ } from '@/components/sections/FAQ';
@@ -19,6 +20,7 @@ export default function LandingPage() {
       <Hero />
       <EmergencyStrip />
       <Services />
+      <CostEstimator />
       <Stats />
       <Testimonials />
       <FAQ />

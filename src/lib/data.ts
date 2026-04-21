@@ -14,6 +14,44 @@ export const COMPANY_INFO = {
   serviceAreas: ['Minneapolis', 'St. Paul', 'Big Lake', 'Brooklyn Center', 'Elk River', 'Plymouth', 'Maple Grove'],
 };
 
+export const ESTIMATE_DATA = {
+  services: [
+    { id: 'plumbing', label: 'Plumbing' },
+    { id: 'heating', label: 'Heating' },
+    { id: 'cooling', label: 'Cooling' },
+    { id: 'drain', label: 'Drain' },
+  ],
+  issues: {
+    plumbing: ['Water heater', 'Burst pipe', 'Leaky faucet', 'Toilet issue', 'Other'],
+    heating: ['Furnace repair', 'Furnace install', 'Maintenance', 'No heat emergency'],
+    cooling: ['AC repair', 'AC install', 'Not cooling', 'Maintenance'],
+    drain: ['Slow drain', 'Fully clogged', 'Sewer backup', 'Camera inspection'],
+  },
+  urgency: [
+    { id: 'urgent', label: "Today — it's urgent", multiplier: 1.2 },
+    { id: 'week', label: 'This week', multiplier: 1.0 },
+    { id: 'planning', label: 'Just planning ahead', multiplier: 0.9 },
+  ],
+  baseRanges: {
+    'Water heater': [600, 2500],
+    'Burst pipe': [300, 1500],
+    'Leaky faucet': [150, 450],
+    'Toilet issue': [149, 600],
+    'Other': [149, 1000],
+    'Furnace repair': [250, 1200],
+    'Furnace install': [3500, 8000],
+    'Maintenance': [89, 189],
+    'No heat emergency': [289, 1500],
+    'AC repair': [250, 1500],
+    'AC install': [4000, 9000],
+    'Not cooling': [189, 1200],
+    'Slow drain': [129, 350],
+    'Fully clogged': [189, 500],
+    'Sewer backup': [350, 2500],
+    'Camera inspection': [250, 500],
+  } as Record<string, [number, number]>
+};
+
 export const OFFICES: Office[] = [
   {
     name: 'Main Office',
