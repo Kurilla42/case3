@@ -8,7 +8,7 @@ import { Process } from '@/components/sections/Process';
 import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { Team } from '@/components/sections/Team';
 import { Stats } from '@/components/sections/Stats';
-import { Testimonials } from '@/components/sections/Testimonials';
+import { ReviewsMarquee } from '@/components/sections/ReviewsMarquee';
 import { FAQ } from '@/components/sections/FAQ';
 import { Contact } from '@/components/sections/Contact';
 import { Footer } from '@/components/sections/Footer';
@@ -28,7 +28,7 @@ export default function LandingPage() {
       <BeforeAfter />
       <Team />
       <Stats />
-      <Testimonials />
+      <ReviewsMarquee />
       <FAQ />
       <Contact />
       <Footer />
