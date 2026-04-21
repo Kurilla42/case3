@@ -54,7 +54,7 @@ export const ESTIMATE_DATA = {
 
 export const OFFICES: Office[] = [
   {
-    name: 'Main Office',
+    name: 'Big Lake Office',
     address: '19950 177th St, Suite 650',
     city: 'Big Lake',
     state: 'MN',
@@ -63,7 +63,7 @@ export const OFFICES: Office[] = [
     mapUrl: 'https://goo.gl/maps/placeholder1',
   },
   {
-    name: 'Minneapolis Hub',
+    name: 'Minneapolis Service Hub',
     address: 'Twin Cities Central',
     city: 'Minneapolis',
     state: 'MN',
@@ -174,15 +174,63 @@ export const REVIEWS: Review[] = [
 export const FAQS: FAQ[] = [
   {
     id: 'faq-1',
-    question: 'Do you offer emergency 24/7 services?',
-    answer: 'Yes! We offer 24/7 emergency services for both plumbing and HVAC issues. If we don\'t arrive same-day, we\'ll give you $100 off.',
+    question: 'Do you charge for the diagnosis visit?',
+    answer: 'No. Diagnosis is always free. You only pay if you approve the work. No pressure.',
     category: 'General',
   },
   {
     id: 'faq-2',
-    question: 'What areas in Minnesota do you serve?',
-    answer: 'We serve the entire Twin Cities area, including Minneapolis, St. Paul, Big Lake, Plymouth, and Maple Grove.',
-    category: 'Service Area',
+    question: "What's the Minnesota Cold Guarantee?",
+    answer: 'If you call before 2pm about no-heat or no-hot-water and we can\'t be there same day, the following visit gets $100 off. Minneapolis-St. Paul metro only.',
+    category: 'Guarantee',
+  },
+  {
+    id: 'faq-3',
+    question: 'Are you licensed?',
+    answer: 'Yes. Master Plumber and Mechanical Contractor licensed in MN. Every tech is background-checked and we carry $2M in liability insurance.',
+    category: 'Trust',
+  },
+  {
+    id: 'faq-4',
+    question: 'Do you charge after-hours fees?',
+    answer: 'No. 24/7 flat rate for members (Happy Home Club+). Non-members pay standard rate between 6pm-8am, no "emergency surcharge" gimmick.',
+    category: 'Pricing',
+  },
+  {
+    id: 'faq-5',
+    question: 'Do you do financing?',
+    answer: 'Yes — Synchrony HOME. Approved in 60 seconds on your phone. 6-24 month terms. Starting 0% APR on qualified installs.',
+    category: 'Pricing',
+  },
+  {
+    id: 'faq-6',
+    question: 'Will you give a firm price before working?',
+    answer: 'Yes. Flat-rate menu pricing after diagnosis. You sign off before anything starts. If the tech finds more issues mid-job, we stop and re-quote.',
+    category: 'Pricing',
+  },
+  {
+    id: 'faq-7',
+    question: 'How fast can you come out for emergency?',
+    answer: 'Our average same-day ETA in Twin Cities is 2.5 hrs from call. Big Lake area under 90 min.',
+    category: 'Emergency',
+  },
+  {
+    id: 'faq-8',
+    question: 'Residential only or commercial too?',
+    answer: 'Mostly residential. Light commercial (small offices, restaurants) — yes. Heavy industrial or multi-unit apartments — we refer out.',
+    category: 'General',
+  },
+  {
+    id: 'faq-9',
+    question: 'What brands do you install?',
+    answer: 'Bryant, Trane, Carrier for HVAC. Rheem, AO Smith, Navien for water heaters. Happy to match what\'s already there if parts available.',
+    category: 'Service',
+  },
+  {
+    id: 'faq-10',
+    question: '1-year workmanship warranty — what does it cover?',
+    answer: 'If our install or repair fails due to our workmanship, we come back free of charge. Manufacturer parts warranties separate (usually 5-10 yrs).',
+    category: 'Guarantee',
   },
 ];
 
