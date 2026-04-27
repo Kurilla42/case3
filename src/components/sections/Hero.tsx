@@ -63,11 +63,12 @@ export const Hero = () => {
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-[4/5] w-full border-2 border-black bg-black group overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
              <Image 
-                src="https://picsum.photos/seed/crew/800/1000" 
+                src="/images/Documentary-style_photograph_of_202604280055 (1).webp" 
                 alt="Thelen Crew" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 data-ai-hint="plumbing team"
+                priority
              />
              <div className="absolute bottom-4 left-4 right-4 bg-white border border-black p-3 flex items-center justify-center gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <span className="font-code text-[13px] font-medium text-graphite uppercase">

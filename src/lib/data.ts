@@ -150,10 +150,10 @@ export const TECHNICIANS: Technician[] = [
     role: "Owner · Master Plumber · 31 years",
     bio: '"If I wouldn\'t do it in my mother\'s basement, we don\'t do it here."',
     since: 'SINCE 1962',
-    location: 'RAY.JPG',
-    photoUrl: 'https://picsum.photos/seed/ray/600/800',
+    location: 'RAY',
+    photoUrl: '/images/Environmental_portrait_of_202604280059 (1).webp',
     color: 'rgba(75, 45, 35, 0.7)',
-    filename: 'RAY.JPG'
+    filename: 'Environmental_portrait_of_202604280059 (1).webp'
   },
   {
     id: 'hannah',
@@ -161,10 +161,10 @@ export const TECHNICIANS: Technician[] = [
     role: 'Lead Technician · 9 years on the truck',
     bio: '"Half my calls are people apologizing for not calling sooner. Don\'t."',
     since: 'JOINED 2014',
-    location: 'HANNAH.JPG',
-    photoUrl: 'https://picsum.photos/seed/hannah/600/800',
+    location: 'HANNAH',
+    photoUrl: '/images/Environmental_portrait_of_202604280058.webp',
     color: 'rgba(35, 55, 75, 0.7)',
-    filename: 'HANNAH.JPG'
+    filename: 'Environmental_portrait_of_202604280058.webp'
   },
   {
     id: 'miguel',
@@ -172,10 +172,10 @@ export const TECHNICIANS: Technician[] = [
     role: "Senior Plumber · 14 years",
     bio: '"I want to leave the house cleaner than I found it. Always."',
     since: 'PIBUBh: 4.96',
-    location: 'MIGUEL.JPG',
-    photoUrl: 'https://picsum.photos/seed/miguel/600/800',
+    location: 'MIGUEL',
+    photoUrl: '/images/Environmental_portrait_of_202604280058 (1).webp',
     color: 'rgba(65, 55, 35, 0.7)',
-    filename: 'MIGUEL.JPG'
+    filename: 'Environmental_portrait_of_202604280058 (1).webp'
   },
   {
     id: 'eli',
@@ -183,9 +183,9 @@ export const TECHNICIANS: Technician[] = [
     role: "Dispatch · 4 years",
     bio: '"I\'m the voice on the phone at 2 AM. I\'ll get someone moving before we hang up."',
     since: 'SINCE 2019',
-    location: 'ELI.JPG',
-    photoUrl: 'https://picsum.photos/seed/eli/600/800',
+    location: 'ELI',
+    photoUrl: '/images/Environmental_portrait_of_202604280059.webp',
     color: 'rgba(35, 75, 55, 0.7)',
-    filename: 'ELI.JPG'
+    filename: 'Environmental_portrait_of_202604280059.webp'
   }
 ];
