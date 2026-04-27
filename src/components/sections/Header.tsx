@@ -78,7 +78,7 @@ export const Header = () => {
             </p>
           </div>
           <Button
-            className="bg-black text-white hover:bg-black/90 font-code text-[11px] h-10 px-6 uppercase tracking-widest rounded-none border border-black flex gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all"
+            className="bg-primary text-white hover:bg-primary/90 font-code text-[11px] h-10 px-6 uppercase tracking-widest rounded-none border border-black flex gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all"
             asChild
           >
             <a href={`tel:${COMPANY_INFO.phone}`}>
