@@ -22,7 +22,7 @@ export const ReviewsMarquee = () => {
           </div>
           <a 
             href="#" 
-            className="h-12 px-6 border border-black bg-white flex items-center justify-center font-body text-[11px] uppercase font-semibold tracking-widest shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
+            className="font-headline text-[14px] font-bold uppercase tracking-[0.05em] text-ink border-2 border-black px-5 py-3 bg-white underline underline-offset-4 hover:bg-black hover:text-white transition-all duration-300 inline-block"
           >
             READ ALL REVIEWS →
           </a>

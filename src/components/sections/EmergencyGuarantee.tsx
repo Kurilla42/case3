@@ -42,15 +42,15 @@ export const EmergencyGuarantee = () => {
                 We back our dispatch around Twin Cities, weekdays and weekends. When you book a same-day call between 7am and 9pm, we either arrive in 89 minutes or you don't pay for the house call.
               </p>
               
-              <div className="space-y-4 border-t border-white/20 pt-6">
+              <div className="flex flex-col gap-4 mt-8 border-y-2 border-white/20 py-6">
                 {[
-                  { id: '01', text: 'Real-time GPS tracker sent to your phone.' },
-                  { id: '02', text: 'Technician bio and photo via SMS.' },
-                  { id: '03', text: 'Diagnostic fee waived if we hit minute 90.' },
+                  { id: '01', text: 'Real-time GPS tracker sent to your phone' },
+                  { id: '02', text: 'Technician bio and photo via SMS' },
+                  { id: '03', text: 'Diagnostic fee waived if we hit minute 90' },
                 ].map((item) => (
-                  <div key={item.id} className="flex gap-4 items-start group">
-                    <span className="font-code text-[11px] font-bold text-white/40 group-hover:text-white transition-colors">{item.id}</span>
-                    <p className="font-body text-[12px] uppercase font-semibold text-white tracking-wide">{item.text}</p>
+                  <div key={item.id} className="grid grid-cols-[32px_1fr] gap-4 items-baseline group">
+                    <span className="font-code text-sm font-semibold text-white/70 group-hover:text-white transition-colors">{item.id}</span>
+                    <p className="font-headline text-[16px] font-medium text-white tracking-wide uppercase">{item.text}</p>
                   </div>
                 ))}
               </div>
