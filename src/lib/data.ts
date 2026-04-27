@@ -14,6 +14,23 @@ export const COMPANY_INFO = {
   serviceAreas: ['Minneapolis', 'St. Paul', 'Big Lake', 'Brooklyn Center', 'Elk River', 'Plymouth', 'Maple Grove'],
 };
 
+export const SERVICE_CITIES = [
+  { name: 'MINNEAPOLIS', zips: '55401—55488' },
+  { name: 'ST. PAUL', zips: '55101—55130' },
+  { name: 'EDINA', zips: '55410, 24, 35, 36, 39' },
+  { name: 'BLOOMINGTON', zips: '55420, 31, 37, 38' },
+  { name: 'ROSEVILLE', zips: '55113' },
+  { name: 'MAPLEWOOD', zips: '55109, 19' },
+  { name: 'PLYMOUTH', zips: '55441, 42, 46, 47' },
+  { name: 'EDEN PRAIRIE', zips: '55344, 46, 47' },
+  { name: 'MINNETONKA', zips: '55305, 43, 45' },
+  { name: 'WOODBURY', zips: '55125, 29' },
+  { name: 'EAGAN', zips: '55121, 22, 23' },
+  { name: 'BURNSVILLE', zips: '55306, 37' },
+  { name: 'APPLE VALLEY', zips: '55124' },
+  { name: 'RICHFIELD', zips: '55423' },
+];
+
 export const ESTIMATE_DATA = {
   issues: [
     { id: 'clogged-drain', label: 'CLOGGED DRAIN', sub: 'KITCHEN / BATH', base: [150, 450] },
