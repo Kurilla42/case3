@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Navigation } from 'lucide-react';
+import { Navigation } from 'lucide-react';
 import { OFFICES, SERVICE_CITIES } from '@/lib/data';
 import Link from 'next/link';
 
@@ -36,7 +36,7 @@ export const ServiceAreas = () => {
             {/* Real Google Map with CSS Filters to match the industrial theme */}
             <div className="absolute inset-0 w-full h-full grayscale-[1] contrast-[1.2] brightness-[0.95] pointer-events-auto">
                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.965431616499!2d-93.7505187!3d45.3341117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3659223126f21%3A0x1034c4493390c58f!2s12345%20County%20Rd%205%2C%20Big%20Lake%2C%20MN%2055309!5e0!3m2!1sen!2sus!4v1715854653245!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d450000.0!2d-93.7505187!3d45.3341117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3659223126f21%3A0x1034c4493390c58f!2s12345%20County%20Rd%205%2C%20Big%20Lake%2C%20MN%2055309!5e0!3m2!1sen!2sus!4v1715854653245!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
