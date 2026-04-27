@@ -13,12 +13,12 @@ export const StatsStats = () => {
              <div className="w-full h-1 bg-black" />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="border border-black p-6 bg-white space-y-1">
+          <div className="grid grid-cols-2 gap-8">
+            <div className="border border-black p-6 bg-white space-y-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
               <p className="text-3xl font-headline m-0">15+</p>
               <p className="font-code text-[10px] uppercase font-black tracking-widest text-muted-foreground">Years in the trenches</p>
             </div>
-            <div className="border border-black p-6 bg-white space-y-1">
+            <div className="border border-black p-6 bg-white space-y-1 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
               <p className="text-3xl font-headline m-0">10K+</p>
               <p className="font-code text-[10px] uppercase font-black tracking-widest text-muted-foreground">Leaks Stopped</p>
             </div>
@@ -30,8 +30,8 @@ export const StatsStats = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="relative aspect-[3/4] border-2 border-black bg-black">
+        <div className="grid grid-cols-2 gap-8">
+          <div className="relative aspect-[3/4] border-2 border-black bg-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
             <Image 
               src="https://picsum.photos/seed/tech-1/600/800" 
               alt="Tech" 
@@ -42,7 +42,7 @@ export const StatsStats = () => {
               <p className="font-code text-[10px] text-white uppercase font-black tracking-widest">DOMINGO R. / LEAD</p>
             </div>
           </div>
-          <div className="relative aspect-[3/4] border-2 border-black bg-white">
+          <div className="relative aspect-[3/4] border-2 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
             <Image 
               src="https://picsum.photos/seed/tool-1/600/800" 
               alt="Equipment" 

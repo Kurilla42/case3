@@ -57,12 +57,12 @@ export const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
-          <div className="px-4 py-1 border border-black font-code text-[11px] uppercase font-bold bg-white">
+        <div className="hidden md:flex items-center gap-6">
+          <div className="px-4 py-1 border border-black font-code text-[11px] uppercase font-bold bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
             LIC #PM123456
           </div>
           <Button
-            className="bg-black text-white hover:bg-black/90 font-code text-[11px] h-10 px-6 uppercase tracking-widest rounded-none border border-black flex gap-3"
+            className="bg-black text-white hover:bg-black/90 font-code text-[11px] h-10 px-6 uppercase tracking-widest rounded-none border border-black flex gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all"
             asChild
           >
             <a href={`tel:${COMPANY_INFO.phone}`}>

@@ -30,15 +30,15 @@ export const MembershipCards = () => {
           <h2 className="leading-none">THE <span className="text-primary">HOME CLUB.</span><br/>BECAUSE PIPES DON'T FAIL POLITELY.</h2>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
-            <div key={i} className={`${plan.color} ${plan.textColor} p-12 border border-black/5 shadow-xl relative`}>
+            <div key={i} className={`${plan.color} ${plan.textColor} p-12 border border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] relative`}>
               {plan.highlight && (
-                <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 font-code text-[10px] font-black">MOST POPULAR</div>
+                <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 font-code text-[10px] font-black shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]">MOST POPULAR</div>
               )}
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-3xl font-headline mb-2">{plan.name}</h3>
+                  <h3 className="text-3xl font-headline mb-2 uppercase">{plan.name}</h3>
                   <div className="flex items-baseline gap-2">
                     <span className="text-6xl font-black">${plan.price}</span>
                     <span className="font-code text-xs uppercase opacity-50">/ month</span>
@@ -52,7 +52,7 @@ export const MembershipCards = () => {
                     </div>
                   ))}
                 </div>
-                <Button className={`w-full h-16 text-lg font-headline uppercase ${plan.highlight ? 'bg-primary text-white hover:bg-primary/90' : 'bg-dark text-white'}`}>
+                <Button className={`w-full h-16 text-lg font-headline uppercase rounded-none border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all ${plan.highlight ? 'bg-primary text-white hover:bg-primary/90' : 'bg-dark text-white'}`}>
                   JOIN THE CLUB
                 </Button>
               </div>
