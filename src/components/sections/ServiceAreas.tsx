@@ -2,22 +2,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Navigation, Plus, Minus, Layers, Maximize2 } from 'lucide-react';
+import { ExternalLink, Navigation } from 'lucide-react';
 import { OFFICES, SERVICE_CITIES } from '@/lib/data';
 import Link from 'next/link';
-import Image from 'next/image';
-
-const mapMarkers = [
-  { id: 1, top: '42%', left: '38%', label: 'Big Lake', active: true },
-  { id: 2, top: '65%', left: '58%', label: 'Minneapolis', active: false },
-  { id: 3, top: '72%', left: '72%', label: 'St. Paul', active: false },
-  { id: 4, top: '55%', left: '52%', label: 'Plymouth', active: false },
-];
 
 export const ServiceAreas = () => {
   return (
     <section id="areas" className="py-24 bg-background overflow-hidden border-t border-black">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-16">
           <p className="font-code uppercase text-[11px] tracking-widest text-muted-foreground font-black mb-4">
