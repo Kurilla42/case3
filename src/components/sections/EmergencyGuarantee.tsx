@@ -14,7 +14,7 @@ export const EmergencyGuarantee = () => {
     <section className="bg-background overflow-hidden py-12 lg:py-24 border-b border-black">
       <div className="container mx-auto px-4">
         {/* Main Promise Box */}
-        <div className="bg-primary border border-black p-8 lg:p-20 grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 bg-primary border border-black p-8 lg:p-20 grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Heading */}
           <div className="space-y-6 lg:space-y-10">

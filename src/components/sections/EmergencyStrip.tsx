@@ -15,7 +15,7 @@ const tickerItems = [
 
 export const EmergencyStrip = () => {
   return (
-    <div className="relative bg-[#1a2230] h-14 flex items-center overflow-hidden border-y border-black">
+    <div className="relative z-10 bg-[#1a2230] h-14 flex items-center overflow-hidden border-y border-black">
       <div className="flex animate-marquee whitespace-nowrap">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex items-center">

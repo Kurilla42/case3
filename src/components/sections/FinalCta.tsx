@@ -8,9 +8,7 @@ import { COMPANY_INFO } from '@/lib/data';
 
 export const FinalCta = () => {
   return (
-    <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden px-4 py-24">
-      <div className="absolute inset-0 pointer-events-none opacity-[0.06] mix-blend-multiply bg-[url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E')]" />
-
+    <section className="relative z-10 min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden px-4 py-24">
       <div className="container mx-auto max-w-6xl relative z-10 text-center space-y-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
