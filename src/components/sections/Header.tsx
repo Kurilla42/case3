@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -22,14 +22,21 @@ const navItems = [
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Safe locale string formatting to prevent hydration mismatch
+  const formattedReviewCount = mounted 
+    ? COMPANY_INFO.stats.reviewCount.toLocaleString() 
+    : COMPANY_INFO.stats.reviewCount.toString();
 
   return (
     <motion.header
@@ -64,7 +71,7 @@ export const Header = () => {
         <div className="hidden lg:flex items-center gap-6">
           <div className="text-right">
             <p className="font-code text-[10px] font-black uppercase tracking-widest leading-none mb-1">
-              ★ {COMPANY_INFO.stats.rating} ({COMPANY_INFO.stats.reviewCount.toLocaleString()} reviews)
+              ★ {COMPANY_INFO.stats.rating} ({formattedReviewCount} reviews)
             </p>
             <p className="font-code text-[9px] font-bold text-muted-foreground uppercase tracking-widest leading-none">
               LIC #MN-PC042881
