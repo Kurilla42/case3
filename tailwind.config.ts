@@ -10,8 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter Tight', 'sans-serif'],
-        headline: ['Archivo Black', 'sans-serif'],
+        body: ['Instrument Sans', 'sans-serif'],
+        headline: ['Archivo', 'sans-serif'],
+        narrow: ['Archivo Narrow', 'sans-serif'],
         code: ['JetBrains Mono', 'monospace'],
       },
       colors: {
@@ -53,23 +54,11 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
-        },
-        sidebar: {
-          DEFAULT: 'hsl(var(--sidebar-background))',
-          foreground: 'hsl(var(--sidebar-foreground))',
-          primary: 'hsl(var(--sidebar-primary))',
-          'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-          accent: 'hsl(var(--sidebar-accent))',
-          'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-          border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))',
-        },
+        brass: '#B58E3D',
+        graphite: '#4A4A4A',
+        ink: '#000000',
+        'ink-soft': '#333333',
+        'signal-ink': '#FBF8F2',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -78,38 +67,17 @@ export default {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
-        'noise': {
-          '0%, 100%': { transform: 'translate(0, 0)' },
-          '10%': { transform: 'translate(-5%, -5%)' },
-          '20%': { transform: 'translate(-10%, 5%)' },
-          '30%': { transform: 'translate(5%, -10%)' },
-          '40%': { transform: 'translate(-5%, 15%)' },
-          '50%': { transform: 'translate(-10%, 5%)' },
-          '60%': { transform: 'translate(15%, 0)' },
-          '70%': { transform: 'translate(0, 10%)' },
-          '80%': { transform: 'translate(-15%, 0)' },
-          '90%': { transform: 'translate(10%, 5%)' },
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'noise': 'noise 0.2s steps(1) infinite',
       },
     },
   },

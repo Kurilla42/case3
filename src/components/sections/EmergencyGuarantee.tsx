@@ -1,28 +1,27 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const stats = [
-  { val: "24", unit: "YRS", sub: "TWIN CITIES, SAME FAMILY", primary: true },
-  { val: "3,412", unit: "", sub: "5-STAR REVIEWS / 4.9 AVG", primary: false },
-  { val: "47", unit: "MIN", sub: "MEDIAN RESPONSE, METRO", primary: false },
-  { val: "11,400", unit: "", sub: "JOBS COMPLETED SINCE '22", primary: true },
+  { val: "24", unit: "YRS", sub: "TWIN CITIES, SAME FAMILY" },
+  { val: "3,412", unit: "", sub: "5-STAR REVIEWS / 4.9 AVG" },
+  { val: "47", unit: "MIN", sub: "MEDIAN RESPONSE, METRO" },
+  { val: "11,400", unit: "", sub: "JOBS COMPLETED SINCE '22" },
 ];
 
 export const EmergencyGuarantee = () => {
   return (
-    <section className="bg-background overflow-hidden py-12 lg:py-24">
+    <section className="bg-background overflow-hidden py-12 lg:py-24 border-b border-black">
       <div className="container mx-auto px-4">
         {/* Main Promise Box */}
         <div className="bg-primary border border-black p-8 lg:p-20 grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Heading */}
           <div className="space-y-6 lg:space-y-10">
-            <p className="font-code text-[11px] uppercase tracking-widest font-black text-white/80">
+            <p className="font-body text-[12px] uppercase font-semibold tracking-[0.12em] text-white/80">
               THE 89-MINUTE PROMISE
             </p>
-            <h2 className="text-white font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>
+            <h2 className="text-white font-extrabold leading-[0.95] tracking-[-0.02em] uppercase m-0" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>
               IF OUR PLUMBER<br />
               ISN'T AT YOUR DOOR<br />
               WITHIN 89 MINUTES<br />
@@ -45,15 +44,15 @@ export const EmergencyGuarantee = () => {
                   { id: '03', text: 'If we\'re late past the 89-min window, the $89 diagnostic fee is waived every time.' },
                 ].map((item) => (
                   <div key={item.id} className="flex gap-4 items-start group">
-                    <span className="font-code text-[11px] font-black text-white/40 group-hover:text-white transition-colors">{item.id}</span>
-                    <p className="font-code text-xs uppercase font-black text-white tracking-wide">{item.text}</p>
+                    <span className="font-code text-[11px] font-bold text-white/40 group-hover:text-white transition-colors">{item.id}</span>
+                    <p className="font-body text-[12px] uppercase font-semibold text-white tracking-wide">{item.text}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <p className="font-code text-[9px] uppercase font-black text-white/40 tracking-[0.05em] leading-relaxed max-w-md">
-              *Applies to same-day residential within our standard service area. Weather holds &gt; 4" snow/ice may pause promise with text notice.
+            <p className="font-code text-[9px] uppercase font-medium text-white/40 tracking-[0.05em] leading-relaxed max-w-md">
+              *Applies to same-day residential within our standard service area. Weather holds may pause promise with notice.
             </p>
           </div>
         </div>
@@ -63,16 +62,16 @@ export const EmergencyGuarantee = () => {
           {stats.map((stat, i) => (
             <div key={i} className="p-10 space-y-2">
               <div className="flex items-baseline gap-2">
-                <span className={`font-headline text-5xl tracking-tighter ${stat.primary ? 'text-primary' : 'text-black'}`}>
+                <span className="font-narrow text-ink font-bold leading-none" style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}>
                   {stat.val}
                 </span>
                 {stat.unit && (
-                  <span className="font-headline text-xl text-black">
+                  <span className="font-headline text-xl text-ink font-bold">
                     {stat.unit}
                   </span>
                 )}
               </div>
-              <p className="font-code text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">
+              <p className="font-body text-[12px] uppercase font-semibold tracking-[0.1em] text-ink/85">
                 {stat.sub}
               </p>
             </div>
