@@ -5,11 +5,11 @@ import { motion } from 'framer-motion';
 import { Plus, Droplet, Waves, Settings, Flame, Search, Building2 } from 'lucide-react';
 
 const services = [
-  { id: '01', icon: Droplet, label: "REPAIR", title: "Pipe Repair", desc: "Burst lines, slow leaks, and hidden seepage. We re-route, re-pipe, or patch — your choice.", price: "189", note: "Most-booked 2 AM – 6 AM" },
+  { id: '01', icon: Droplet, label: "REPAIR", title: "Pipe Repair", desc: "Burst lines, slow leaks, and hidden seepage. We re-route, re-pipe, or patch — your choice.", price: "189" },
   { id: '02', icon: Settings, label: "SWAP", title: "Water Heaters", desc: "Tank or tankless, gas or electric. Same-day install if we have it on the truck. Old unit hauled.", price: "1,200" },
   { id: '03', icon: Waves, label: "CLEAR", title: "Drain Clearing", desc: "Camera inspection included. Snake, hydrojet, or rooter — we use what the clog deserves.", price: "149", prefix: "Flat" },
   { id: '04', icon: Flame, label: "FIX", title: "Fixtures & Faucets", desc: "Toilets, faucets, garbage disposals, shutoff valves. The boring ones we do well.", price: "129" },
-  { id: '05', icon: Search, label: "FIND", title: "Leak Detection", desc: "Sub-slab, behind walls, in the yard. Non-invasive listening tools before we cut into anything.", price: "275", note: "Free if we do the repair same visit" },
+  { id: '05', icon: Search, label: "FIND", title: "Leak Detection", desc: "Sub-slab, behind walls, in the yard. Non-invasive listening tools before we cut into anything.", price: "275" },
   { id: '06', icon: Building2, label: "B2B", title: "Commercial", desc: "Restaurants, salons, clinics. NET-30 terms, single dispatch line, multi-location accounts.", price: "BID", prefix: "Call for" },
 ];
 
@@ -57,7 +57,7 @@ export const Services = () => {
                   <span className="font-code text-[20px] font-medium text-brass leading-none mt-1">
                     {s.price === "BID" ? "QUOTE" : `$${s.price}`}
                   </span>
-                  {s.note && (
+                  {'note' in s && s.note && (
                     <span className="font-code text-[9px] uppercase font-black text-muted-foreground/60 mt-2 tracking-tighter">
                       · {s.note}
                     </span>
