@@ -41,59 +41,23 @@ export const ServiceAreas = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            {/* Map Background (Street map feel with filters) */}
-            <div className="absolute inset-0 w-full h-full grayscale-[1] contrast-[1.1] brightness-[0.95] opacity-80">
-              <Image 
-                src="https://picsum.photos/seed/twincities-map/800/1000" 
-                alt="Stylized Street Map" 
-                fill 
-                className="object-cover"
-                data-ai-hint="street map"
-              />
+            {/* Real Google Map with CSS Filters to match the industrial theme */}
+            <div className="absolute inset-0 w-full h-full grayscale-[1] contrast-[1.2] brightness-[0.95] pointer-events-auto">
+               <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.965431616499!2d-93.7505187!3d45.3341117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3659223126f21%3A0x1034c4493390c58f!2s12345%20County%20Rd%205%2C%20Big%20Lake%2C%20MN%2055309!5e0!3m2!1sen!2sus!4v1715854653245!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  className="opacity-90"
+               ></iframe>
             </div>
 
-            {/* Map Grid Pattern Overlay */}
+            {/* Map Grid Pattern Overlay (Visual flair) */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
-            {/* Map Markers (Pins) */}
-            {mapMarkers.map((marker) => (
-              <div 
-                key={marker.id}
-                className="absolute z-20 group/marker"
-                style={{ top: marker.top, left: marker.left }}
-              >
-                <div className={`relative flex items-center justify-center w-4 h-4 rounded-full border-2 border-white shadow-lg transition-transform hover:scale-125 cursor-pointer ${marker.active ? 'bg-primary' : 'bg-black'}`}>
-                  {marker.active && (
-                    <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-40" />
-                  )}
-                  {/* Tooltip for marker */}
-                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white font-code text-[8px] uppercase tracking-widest whitespace-nowrap opacity-0 group-hover/marker:opacity-100 transition-opacity">
-                    {marker.label}
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Top Right Map Controls */}
-            <div className="absolute top-4 right-4 flex flex-col gap-1 z-30">
-              <div className="bg-white border border-black/10 shadow-sm flex flex-col">
-                <button className="p-2 hover:bg-muted transition-colors border-b border-black/5"><Plus size={14} /></button>
-                <button className="p-2 hover:bg-muted transition-colors"><Minus size={14} /></button>
-              </div>
-              <button className="bg-white border border-black/10 p-2 shadow-sm hover:bg-muted transition-colors"><Maximize2 size={14} /></button>
-            </div>
-
-            {/* Map Style Toggle */}
-            <div className="absolute bottom-8 left-4 z-30 flex items-center gap-2">
-              <div className="relative w-12 h-12 border-2 border-white shadow-md overflow-hidden rounded-sm cursor-pointer group/sat">
-                <Image src="https://picsum.photos/seed/satellite-view/100/100" alt="Satellite" fill className="object-cover grayscale transition-transform group-hover/sat:scale-110" />
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                  <Layers size={14} className="text-white" />
-                </div>
-              </div>
-            </div>
-
-            {/* Primary Location Card (Matches Screenshot) */}
+            {/* Primary Location Card */}
             <div className="absolute top-4 left-4 w-64 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 flex justify-between items-start z-30">
               <div className="space-y-0.5">
                 <div className="flex items-center gap-2 mb-1">
@@ -110,14 +74,12 @@ export const ServiceAreas = () => {
             </div>
 
             {/* Bottom Technical Footer */}
-            <div className="absolute bottom-0 right-0 left-0 bg-white/60 backdrop-blur-[2px] h-5 flex items-center justify-between px-3 z-30">
+            <div className="absolute bottom-0 right-0 left-0 bg-white/60 backdrop-blur-[2px] h-5 flex items-center justify-between px-3 z-30 pointer-events-none">
               <div className="flex gap-2">
                 <span className="text-[7px] font-code uppercase text-black/50">45.3341° N, 93.7483° W</span>
               </div>
               <div className="flex gap-3">
-                <span className="text-[7px] font-code uppercase text-black/40">Map data ©2026 Google</span>
-                <span className="text-[7px] font-code uppercase text-black/40">Terms</span>
-                <span className="text-[7px] font-code uppercase text-black/40">Report an error</span>
+                <span className="text-[7px] font-code uppercase text-black/40">Real-time Dispatch Active</span>
               </div>
             </div>
           </motion.div>
