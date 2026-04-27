@@ -8,7 +8,7 @@ import { EmergencyGuarantee } from '@/components/sections/EmergencyGuarantee';
 import { StatsStats } from '@/components/sections/StatsStats';
 import { Process } from '@/components/sections/Process';
 import { Team } from '@/components/sections/Team';
-import { RealTimeTracker } from '@/components/sections/RealTimeTracker';
+import { BeforeAfter } from '@/components/sections/BeforeAfter';
 import { MembershipCards } from '@/components/sections/MembershipCards';
 import { ReviewsMarquee } from '@/components/sections/ReviewsMarquee';
 import { ServiceAreas } from '@/components/sections/ServiceAreas';
@@ -31,7 +31,7 @@ export default function LandingPage() {
       <StatsStats />
       <Process />
       <Team />
-      <RealTimeTracker />
+      <BeforeAfter />
       <MembershipCards />
       <ReviewsMarquee />
       <ServiceAreas />
