@@ -1,24 +1,22 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { ImageComparison } from '@/components/ui/image-comparison';
-import { cn } from '@/lib/utils';
 
 const cases = [
   {
     id: 'case-1',
-    location: 'St. Paul, MN',
-    title: '3 AM Frozen Pipe Burst',
-    stats: { time: '45m Response', status: 'Repaired' },
+    location: 'Edina · January 2026',
+    title: '3 AM FROZEN PIPE BURST',
+    desc: '"Polar vortex took out a 1956 galvanized line behind the dryer. We re-piped to copper, dried the wall cavity, and were out by 6:40 AM."',
     before: 'https://picsum.photos/seed/pipe-before/800/600',
     after: 'https://picsum.photos/seed/pipe-after/800/600',
   },
   {
     id: 'case-2',
-    location: 'Big Lake, MN',
-    title: 'Rusted Tank Replacement',
-    stats: { time: 'Same-Day', status: 'Upgraded' },
+    location: 'St. Paul · March 2026',
+    title: 'RUSTED TANK REPLACEMENT',
+    desc: '"40-gallon tank failed at year 13. Same-day Bradford White install. Old tank hauled. Insurance got the photos in their inbox by lunch."',
     before: 'https://picsum.photos/seed/heater-before/800/600',
     after: 'https://picsum.photos/seed/heater-after/800/600',
   }
@@ -33,8 +31,8 @@ export const BeforeAfter = () => {
             06 / PROOF OF WORK
           </p>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>
-            WHAT WE WALKED INTO.<br />
-            WHAT WE LEFT.
+            What we walked into.<br />
+            What we left.
           </h2>
         </div>
 
@@ -49,24 +47,17 @@ export const BeforeAfter = () => {
                 />
               </div>
               
-              <div className="flex justify-between items-start pt-2">
+              <div className="space-y-4 pt-2">
                 <div className="space-y-1">
                   <h3 className="font-headline text-2xl uppercase tracking-tight m-0">{item.title}</h3>
                   <p className="font-code text-[10px] uppercase font-black text-primary tracking-widest">{item.location}</p>
                 </div>
-                <div className="text-right">
-                  <p className="font-code text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">{item.stats.time}</p>
-                  <p className="font-code text-[10px] uppercase font-black text-black tracking-widest">{item.stats.status}</p>
-                </div>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed italic">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-16 pt-12 border-t border-black/10 flex justify-center">
-          <p className="font-code text-[11px] uppercase font-black text-muted-foreground text-center max-w-lg leading-relaxed">
-            * All photos taken by Thelen technicians on-site. Slide the handle to compare the mess with the fix.
-          </p>
         </div>
       </div>
     </section>

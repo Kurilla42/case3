@@ -20,15 +20,15 @@ export const FAQ = () => {
             10 / FAQ
           </p>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0 flex-1" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>
-            THE QUESTIONS <br />
-            WE GET <span className="text-primary">EVERY</span> <br />
-            WEEK.
+            The questions <br />
+            we get <span className="text-primary">every</span> <br />
+            week.
           </h2>
         </div>
 
         <div className="border-y-[1px] border-black">
           <Accordion type="single" collapsible className="w-full">
-            {FAQS.map((faq, index) => (
+            {FAQS.map((faq) => (
               <AccordionItem 
                 key={faq.id} 
                 value={faq.id} 
@@ -36,11 +36,11 @@ export const FAQ = () => {
               >
                 <AccordionTrigger className={cn(
                   "hover:no-underline group py-8 [&[data-state=open]>div>div]:rotate-45",
-                  "[&>svg]:hidden" // Hide the default chevron
+                  "[&>svg]:hidden"
                 )}>
                   <div className="flex items-center justify-between w-full">
                     <span className="font-headline text-lg md:text-xl tracking-tight uppercase text-left pr-8">
-                      {faq.question}
+                      Q: {faq.question}
                     </span>
                     <div className="shrink-0 w-6 h-6 flex items-center justify-center transition-transform duration-300">
                       <Plus className="h-4 w-4 text-primary" strokeWidth={3} />
@@ -48,7 +48,7 @@ export const FAQ = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground font-body text-base lg:text-lg leading-relaxed max-w-3xl pb-8">
-                  {faq.answer}
+                  A: {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -8,14 +8,14 @@ const plans = [
   {
     name: "TUNE-UP CLUB",
     price: "12",
-    features: ["2 HVAC Tune-ups", "1 Plumbing Inspection", "15% Service Discount", "Priority Scheduling"],
+    features: ["2 HVAC tune-ups (spring + fall)", "1 plumbing inspection", "10% off all service calls", "Priority dispatch (we move you ahead)"],
     color: "bg-white",
     textColor: "text-dark"
   },
   {
     name: "PLATINUM PLAN",
     price: "29",
-    features: ["4 Total Tune-ups", "2 Plumbing Inspections", "25% Service Discount", "Zero Dispatch Fees", "Free Sewer Camera"],
+    features: ["Everything in Tune-Up Club", "Zero dispatch fees, ever", "Free water-heater flush annually", "5-year extended warranty on installs"],
     color: "bg-dark",
     textColor: "text-white",
     highlight: true
@@ -24,10 +24,18 @@ const plans = [
 
 export const MembershipCards = () => {
   return (
-    <section className="py-24 bg-background border-t">
+    <section id="pricing" className="py-24 bg-background border-t">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="leading-none">THE <span className="text-primary">HOME CLUB.</span><br/>BECAUSE PIPES DON'T FAIL POLITELY.</h2>
+        <div className="mb-16 space-y-4">
+          <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">
+            07 / MAINTENANCE
+          </p>
+          <h2 className="leading-[0.95] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}>
+            The Home Club.<br/>Because pipes don't fail politely.
+          </h2>
+          <p className="font-body text-lg text-muted-foreground mt-6 max-w-2xl">
+            Two-tier maintenance plan. Cancel anytime. No phone-tree to do it.
+          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -48,12 +56,12 @@ export const MembershipCards = () => {
                   {plan.features.map((f, j) => (
                     <div key={j} className="flex items-center gap-3">
                       <Check size={18} className="text-primary" />
-                      <span className="font-bold text-lg">{f}</span>
+                      <span className="font-bold text-lg leading-tight">{f}</span>
                     </div>
                   ))}
                 </div>
                 <Button className={`w-full h-16 text-lg font-headline uppercase rounded-none border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all ${plan.highlight ? 'bg-primary text-white hover:bg-primary/90' : 'bg-dark text-white'}`}>
-                  JOIN THE CLUB
+                  JOIN {plan.name.split(' ')[0]} →
                 </Button>
               </div>
             </div>

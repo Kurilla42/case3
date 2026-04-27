@@ -14,11 +14,10 @@ export const Team = () => {
             05 / TEAM
           </p>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 7rem)' }}>
-            THE PEOPLE WHO'LL<br />ACTUALLY SHOW UP.
+            The people who'll<br />actually show up.
           </h2>
           <p className="font-body text-lg text-muted-foreground mt-8 max-w-2xl leading-relaxed">
-            Every one of our techs is background-checked, licensed, and has been with 
-            Thelen for 3+ years. <span className="text-black font-bold italic">No subcontractors ever.</span>
+            Every one of our trucks is background-checked, licensed, and named on this page. <span className="text-black font-bold italic">No subcontractors.</span>
           </p>
         </div>
 
@@ -50,7 +49,7 @@ export const Team = () => {
                 {/* Portrait Technical Label */}
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="font-code text-[8px] uppercase font-black text-white/60 tracking-widest truncate">
-                    PORTRAIT P'B- PLACEHOLDER P'B- {tech.filename}
+                    {tech.location}
                   </p>
                 </div>
               </div>
@@ -67,18 +66,8 @@ export const Team = () => {
                     </p>
                   </div>
                   
-                  <p className="font-body text-sm text-black leading-relaxed">
+                  <p className="font-body text-sm text-black leading-relaxed italic">
                     {tech.bio}
-                  </p>
-                </div>
-
-                {/* Footer Row */}
-                <div className="pt-8 flex justify-between items-end">
-                  <p className="font-code text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">
-                    {tech.since}
-                  </p>
-                  <p className="font-code text-[10px] uppercase font-black text-black tracking-widest">
-                    {tech.location}
                   </p>
                 </div>
               </div>

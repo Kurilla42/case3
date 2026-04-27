@@ -12,36 +12,21 @@ export const Footer = () => {
           
           {/* Column 1: Identity */}
           <div className="space-y-8">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-black flex items-center justify-center text-white font-headline text-xl">T</div>
-              <h2 className="text-lg font-headline m-0 italic tracking-tighter uppercase">THELEN PLUMBING</h2>
+            <div className="flex flex-col">
+              <h2 className="text-xl font-headline italic tracking-tighter uppercase leading-none">THELEN PLUMBING CO.</h2>
+              <span className="font-body text-[10px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Family-owned since 1962</span>
             </div>
             
             <p className="font-body text-xs text-muted-foreground max-w-[280px] leading-relaxed uppercase font-medium">
-              Twin Cities' straight-talking plumbers. Family-owned since 2002. Licensed, bonded, and locally dispatched.
+              Three generations · Twin Cities, MN. Licensed, bonded, and locally dispatched.
             </p>
-
-            <div className="space-y-4 pt-4">
-              <div className="space-y-1">
-                <p className="font-code text-[10px] font-black uppercase tracking-widest">THELEN PLUMBING, INC.</p>
-                <p className="font-code text-[10px] font-black text-muted-foreground uppercase tracking-widest">427 HARRISON ST NE B- SUITE 200</p>
-                <p className="font-code text-[10px] font-black text-muted-foreground uppercase tracking-widest">MINNEAPOLIS, MN 55413</p>
-              </div>
-              
-              <div className="space-y-1">
-                <p className="font-code text-[10px] font-black uppercase tracking-widest">
-                  DISPATCH B- <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-primary">{COMPANY_INFO.phone}</a>
-                </p>
-                <p className="font-code text-[10px] font-black text-muted-foreground uppercase tracking-widest">MONB-SUN B- 24 / 7</p>
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Services */}
           <div className="space-y-6">
             <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">SERVICES</p>
             <ul className="space-y-3">
-              {['EMERGENCY PLUMBING', 'DRAIN CLEANING', 'WATER HEATERS', 'SUMP PUMPS', 'RE-PIPE', 'WATER SOFTENERS'].map((item) => (
+              {['Pipe Repair', 'Water Heaters', 'Drain Clearing', 'Fixtures', 'Leak Detection', 'Commercial', 'Membership', 'Financing'].map((item) => (
                 <li key={item}>
                   <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
                     {item}
@@ -55,7 +40,7 @@ export const Footer = () => {
           <div className="space-y-6">
             <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">COMPANY</p>
             <ul className="space-y-3">
-              {['OUR TEAM', 'THE 89 PROMISE', 'CAREERS B- HIRING', 'REVIEWS', 'BLOG / NOTES'].map((item) => (
+              {['About', 'The Crew', 'Reviews', 'Service Area', 'Careers', 'Press', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
                     {item}
@@ -65,33 +50,29 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Service Area */}
+          {/* Column 4: Contact */}
           <div className="space-y-6">
-            <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">SERVICE AREA</p>
-            <ul className="space-y-3">
-              {['MINNEAPOLIS', 'ST. PAUL', 'EDINA', 'BLOOMINGTON', 'FULL METRO LIST'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">CONTACT</p>
+            <div className="space-y-4">
+              <div className="space-y-1">
+                <p className="font-code text-[10px] font-black uppercase tracking-widest">
+                   <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-primary">{COMPANY_INFO.phone} · 24/7</a>
+                </p>
+                <p className="font-code text-[10px] font-black text-muted-foreground uppercase tracking-widest">{COMPANY_INFO.email}</p>
+                <p className="font-code text-[10px] font-black text-muted-foreground uppercase tracking-widest">12345 County Rd 5, Big Lake, MN 55309</p>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="font-code text-[9px] font-black text-muted-foreground uppercase tracking-widest">
-            B- 2026 THELEN PLUMBING, INC. B- ALL RIGHTS RESERVED.
-          </p>
-          
-          <p className="font-code text-[9px] font-black text-muted-foreground uppercase tracking-widest">
-            MN MASTER PLUMBER LICENSE <span className="text-primary">#PM061478</span> B- MN CONTRACTOR BC00214
+            LIC #MN-PC042881  ·  PHCC MEMBER  ·  BBB A+  ·  © 2026 Thelen Plumbing Co. · 3 generations and counting.
           </p>
 
           <div className="flex gap-6">
-            {['PRIVACY', 'TERMS', 'ACCESSIBILITY'].map((item) => (
+            {['PRIVACY', 'TERMS'].map((item) => (
               <Link key={item} href="#" className="font-code text-[9px] font-black text-muted-foreground hover:text-black uppercase tracking-widest">
                 {item} B-
               </Link>

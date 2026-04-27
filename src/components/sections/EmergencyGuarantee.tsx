@@ -3,10 +3,10 @@
 import React from 'react';
 
 const stats = [
-  { val: "24", unit: "YRS", sub: "TWIN CITIES, SAME FAMILY" },
-  { val: "3,412", unit: "", sub: "5-STAR REVIEWS / 4.9 AVG" },
-  { val: "47", unit: "MIN", sub: "MEDIAN RESPONSE, METRO" },
-  { val: "11,400", unit: "", sub: "JOBS COMPLETED SINCE '22" },
+  { val: "24", unit: "", sub: "YEARS DISPATCHING" },
+  { val: "3,412", unit: "", sub: "GOOGLE REVIEWS · 4.9★" },
+  { val: "47", unit: "", sub: "NEIGHBORHOODS SERVED IN MN" },
+  { val: "11,400", unit: "", sub: "JOBS PER YEAR IN TWIN CITIES" },
 ];
 
 export const EmergencyGuarantee = () => {
@@ -19,14 +19,12 @@ export const EmergencyGuarantee = () => {
           {/* Left Column: Heading */}
           <div className="space-y-6 lg:space-y-10">
             <p className="font-body text-[12px] uppercase font-semibold tracking-[0.12em] text-white/80">
-              THE 89-MINUTE PROMISE
+              THE GUARANTEE
             </p>
             <h2 className="text-white font-extrabold leading-[0.95] tracking-[-0.02em] uppercase m-0" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>
-              IF OUR PLUMBER<br />
-              ISN'T AT YOUR DOOR<br />
-              WITHIN 89 MINUTES<br />
-              THE DIAGNOSTIC'S<br />
-              ON US.
+              If our plumber isn't at your door <br />
+              within 89 minutes, the diagnostic's <br />
+              on us.
             </h2>
           </div>
 
@@ -34,14 +32,14 @@ export const EmergencyGuarantee = () => {
           <div className="space-y-12">
             <div className="space-y-6">
               <p className="font-body text-white/90 text-lg leading-relaxed max-w-md">
-                We built our dispatch around Twin Cities traffic, weather, and skyways. When you book a same-day slot between 7am and 7pm:
+                We back our dispatch around Twin Cities, weekdays and weekends. When you book a same-day call between 7am and 9pm, we either arrive in 89 minutes or you don't pay for the house call.
               </p>
               
               <div className="space-y-4 border-t border-white/20 pt-6">
                 {[
-                  { id: '01', text: 'We confirm by text inside 2 minutes.' },
-                  { id: '02', text: 'You get a live tracker the second we dispatch.' },
-                  { id: '03', text: 'If we\'re late past the 89-min window, the $89 diagnostic fee is waived every time.' },
+                  { id: '01', text: 'Real-time GPS tracker sent to your phone.' },
+                  { id: '02', text: 'Technician bio and photo via SMS.' },
+                  { id: '03', text: 'Diagnostic fee waived if we hit minute 90.' },
                 ].map((item) => (
                   <div key={item.id} className="flex gap-4 items-start group">
                     <span className="font-code text-[11px] font-bold text-white/40 group-hover:text-white transition-colors">{item.id}</span>
@@ -52,7 +50,7 @@ export const EmergencyGuarantee = () => {
             </div>
 
             <p className="font-code text-[9px] uppercase font-medium text-white/40 tracking-[0.05em] leading-relaxed max-w-md">
-              *Applies to same-day residential within our standard service area. Weather holds may pause promise with notice.
+              *Applies to same-day residential calls. Named winter storms or Vikings playoff games may pause promise with notice.
             </p>
           </div>
         </div>

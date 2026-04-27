@@ -1,211 +1,144 @@
 import { Service, Review, FAQ, Office, PromoOffer, Technician } from './types';
 
 export const COMPANY_INFO = {
-  name: 'Thelen Plumbing, Heating, and Air',
+  name: 'THELEN PLUMBING CO.',
   phone: '(763) 220-1064',
-  email: 'admin@thelenmechanical.com',
-  tagline: 'Trusted Comfort for Your Twin Cities Home.',
-  emergencyTagline: '24/7 Same-Day Guarantee or $100 Off',
+  email: 'hello@thelenplumbing.com',
+  tagline: 'SERVING TWIN CITIES SINCE 1962',
+  emergencyTagline: '⚡ 89-MINUTE GUARANTEE — OR THE DIAGNOSTIC IS ON US',
   stats: {
     rating: 4.9,
-    reviewCount: 500,
-    recommendRate: 98,
+    reviewCount: 3412,
+    recommendRate: 99,
   },
   serviceAreas: ['Minneapolis', 'St. Paul', 'Big Lake', 'Brooklyn Center', 'Elk River', 'Plymouth', 'Maple Grove'],
+};
+
+export const ESTIMATE_DATA = {
+  issues: [
+    { id: 'clogged-drain', label: 'CLOGGED DRAIN', sub: 'SLOW OR STOPPED', base: [149, 225] },
+    { id: 'pipe-repair', label: 'PIPE REPAIR', sub: 'ACTIVE LEAK', base: [189, 450] },
+    { id: 'water-heater', label: 'WATER HEATER', sub: 'NO HOT WATER', base: [1200, 2400] },
+    { id: 'ac-repair', label: 'AC REPAIR', sub: 'BLOWS WARM AIR', base: [275, 800] },
+    { id: 'heating-repair', label: 'HEATING REPAIR', sub: 'NO HEAT', base: [225, 650] },
+    { id: 'leak-find', label: 'LEAK DETECTION', sub: 'HIDDEN LEAK', base: [275, 550] },
+  ],
+  homeSizes: [
+    { id: 'small', label: 'APARTMENT / SMALL', sub: '< 1,200 SQ.FT', mult: 0.85 },
+    { id: 'medium', label: 'STANDARD HOME', sub: '1,200 - 2,500 SQ.FT', mult: 1.0 },
+    { id: 'large', label: 'ESTATE / MULTI', sub: '2,500+ SQ.FT', mult: 1.35 },
+  ],
+  urgency: [
+    { id: 'normal', label: 'NEXT DAY', sub: 'STANDARD', mult: 1.0 },
+    { id: 'priority', label: 'SAME DAY', sub: 'PRIORITY', mult: 1.2 },
+    { id: 'emergency', label: 'EMERGENCY', sub: '89-MIN PROMISE', mult: 1.5 },
+  ],
 };
 
 export const SERVICE_CITIES = [
   { name: 'MINNEAPOLIS', zips: '55401—55488' },
   { name: 'ST. PAUL', zips: '55101—55130' },
+  { name: 'WAYZATA', zips: '55391' },
+  { name: 'ROSEVILLE', zips: '55113' },
+  { name: 'APPLE VALLEY', zips: '55124' },
   { name: 'EDINA', zips: '55410, 24, 35, 36, 39' },
   { name: 'BLOOMINGTON', zips: '55420, 31, 37, 38' },
-  { name: 'ROSEVILLE', zips: '55113' },
-  { name: 'MAPLEWOOD', zips: '55109, 19' },
-  { name: 'PLYMOUTH', zips: '55441, 42, 46, 47' },
-  { name: 'EDEN PRAIRIE', zips: '55344, 46, 47' },
-  { name: 'MINNETONKA', zips: '55305, 43, 45' },
-  { name: 'WOODBURY', zips: '55125, 29' },
   { name: 'EAGAN', zips: '55121, 22, 23' },
+  { name: 'WOODBURY', zips: '55125, 29' },
+  { name: 'STILLWATER', zips: '55082' },
   { name: 'BURNSVILLE', zips: '55306, 37' },
-  { name: 'APPLE VALLEY', zips: '55124' },
-  { name: 'RICHFIELD', zips: '55423' },
+  { name: 'MAPLE GROVE', zips: '55311, 69' },
+  { name: 'PLYMOUTH', zips: '55441, 42, 46, 47' },
+  { name: 'BIG LAKE', zips: '55309' },
+  { name: 'ELK RIVER', zips: '55330' },
 ];
-
-export const ESTIMATE_DATA = {
-  issues: [
-    { id: 'clogged-drain', label: 'CLOGGED DRAIN', sub: 'KITCHEN / BATH', base: [150, 450] },
-    { id: 'active-leak', label: 'ACTIVE LEAK', sub: 'PIPE / FIXTURE', base: [200, 600] },
-    { id: 'water-heater', label: 'WATER HEATER', sub: 'REPAIR OR SWAP', base: [800, 2500] },
-    { id: 'sewer-line', label: 'SEWER LINE', sub: 'MAIN DRAIN', base: [350, 1500] },
-    { id: 'sump-pump', label: 'SUMP PUMP', sub: 'INSTALL / REPLACE', base: [400, 1200] },
-    { id: 'remodel', label: 'REMODEL', sub: 'KITCHEN / BATH', base: [1500, 5000] },
-  ],
-  homeSizes: [
-    { id: 'small', label: 'CONDO / TOWNHOME', sub: 'UNDER 1,400 SQFT', mult: 0.8 },
-    { id: 'medium', label: 'TYPICAL HOME', sub: '1,400 - 2,800 SQFT', mult: 1.0 },
-    { id: 'large', label: 'LARGE / MULTI-LEVEL', sub: '2,800+', mult: 1.3 },
-  ],
-  urgency: [
-    { id: 'normal', label: 'SCHEDULE NORMALLY', sub: 'NEXT 2 DAYS', mult: 1.0 },
-    { id: 'same-day', label: 'SAME-DAY', sub: 'TODAY, BUSINESS HRS', mult: 1.2 },
-    { id: 'emergency', label: 'EMERGENCY', sub: 'AFTER-HOURS / 24/7', mult: 1.5 },
-  ],
-};
 
 export const OFFICES: Office[] = [
   {
-    name: 'Big Lake Office',
-    address: '19950 177th St, Suite 650',
+    name: 'BIG LAKE OFFICE',
+    address: '12345 County Rd 5',
     city: 'Big Lake',
     state: 'MN',
     zip: '55309',
     phone: '(763) 220-1064',
-    mapUrl: 'https://goo.gl/maps/placeholder1',
+    mapUrl: '#',
   },
   {
-    name: 'Minneapolis Service Hub',
-    address: 'Twin Cities Central',
+    name: 'MINNEAPOLIS DISPATCH HUB',
+    address: '8201 Industrial Park Blvd',
     city: 'Minneapolis',
     state: 'MN',
-    zip: '55401',
+    zip: '55428',
     phone: '(763) 220-1064',
-    mapUrl: 'https://goo.gl/maps/placeholder2',
-  },
-];
-
-export const SERVICES: Service[] = [
-  {
-    id: 'plumbing-repair',
-    title: 'Expert Plumbing Repair',
-    description: 'From leaky faucets to burst pipes, we handle all plumbing emergencies with speed and precision.',
-    icon: 'Droplets',
-    category: 'plumbing',
-  },
-  {
-    id: 'drain-cleaning',
-    title: 'Professional Drain Cleaning',
-    description: 'Slow drains? We use advanced technology to clear blockages and restore flow instantly.',
-    icon: 'Waves',
-    category: 'plumbing',
-  },
-  {
-    id: 'ac-repair',
-    title: 'AC Repair & Install',
-    description: 'Stay cool with our expert air conditioning services, including maintenance and new system installs.',
-    icon: 'Snowflake',
-    category: 'cooling',
-  },
-  {
-    id: 'heating-repair',
-    title: 'Heating System Repair',
-    description: 'Specializing in furnace and boiler repairs to keep your home warm during MN winters.',
-    icon: 'Flame',
-    category: 'heating',
+    mapUrl: '#',
   },
 ];
 
 export const REVIEWS: Review[] = [
   {
     id: '1',
-    author: 'Jessica L.',
+    author: 'Sarah K.',
     rating: 5,
-    text: "I was without heat and they came out same day. Taylor had it running in 2 hours. 100% recommend.",
-    date: 'Feb 2026',
+    text: "Called at 11 PM with water under the kitchen sink. Eli answered, Hannah was at my door in 47 minutes, and the price she quoted was the price I paid. That's it. That's the whole review.",
+    date: 'APR 2026',
     source: 'google',
+    meta: 'Edina, MN · Customer since 2023'
   },
   {
     id: '2',
-    author: 'Mark T.',
+    author: 'Marcus D.',
     rating: 5,
-    text: "Furnace died on Christmas Eve. They answered the phone. They showed up. Enough said.",
-    date: 'Dec 2025',
+    text: "I've used three plumbers in twelve years owning this duplex. Thelen is the only one who told me what something would cost before they did it. Will keep using them.",
+    date: 'MAR 2026',
     source: 'google',
+    meta: 'St. Paul, MN · Property owner'
   },
   {
     id: '3',
-    author: 'Sarah B.',
+    author: 'Jenna R.',
     rating: 5,
-    text: "Had a major leak under the sink. Called Thelen and they were here within an hour. Professional and clean.",
-    date: 'Jan 2026',
+    text: "They wear shoe covers. I know that sounds small. After what the last guy tracked through my white carpet, it isn't.",
+    date: 'FEB 2026',
     source: 'google',
-  },
-  {
-    id: '4',
-    author: 'David R.',
-    rating: 5,
-    text: "Taylor replaced our old water heater. Fair price and he even fixed a small issue with our laundry drain for free.",
-    date: 'Feb 2026',
-    source: 'google',
-  },
-  {
-    id: '5',
-    author: 'Emily W.',
-    rating: 5,
-    text: "Best HVAC service in the cities. No hidden fees, just straightforward honest work.",
-    date: 'March 2026',
-    source: 'google',
-  },
-  {
-    id: '6',
-    author: 'Mike S.',
-    rating: 5,
-    text: "Clear communication from start to finish. They texted when they were on their way. 5 stars.",
-    date: 'Jan 2026',
-    source: 'google',
-  },
-  {
-    id: '7',
-    author: 'Lisa K.',
-    rating: 5,
-    text: "Finally found a plumber I can trust. Cleaned up everything after fixing my clogged main line.",
-    date: 'Feb 2026',
-    source: 'google',
-  },
-  {
-    id: '8',
-    author: 'John P.',
-    rating: 5,
-    text: "Needed a full AC install. These guys were competitive on price and did a much cleaner job than the previous company.",
-    date: 'March 2026',
-    source: 'google',
+    meta: 'Wayzata, MN · Customer since 2024'
   },
 ];
 
 export const FAQS: FAQ[] = [
   {
     id: 'faq-1',
-    question: 'WHY "FLAT-RATE" INSTEAD OF HOURLY?',
-    answer: 'Because the clock shouldn\'t be your enemy. You know the total before we start, whether it takes 20 minutes or 4 hours. No "billable hour" gimmicks.',
+    question: 'Why "flat-rate" instead of hourly?',
+    answer: "Because hourly is a guess that puts the risk on you. Flat-rate puts the risk on us — if the job takes longer than we expected, that's our problem to solve, not your bill to absorb.",
     category: 'Pricing',
   },
   {
     id: 'faq-2',
-    question: 'IS THE $89 DIAGNOSTIC REALLY REFUNDED IF YOU\'RE LATE?',
-    answer: 'Every single time. If we hit minute 90 on our arrival window, the $89 dispatch fee is deleted from your bill automatically. No questions asked.',
+    question: "Is the 89-minute diagnostic really refunded if you're late?",
+    answer: "Yes. We honor it on same-day calls booked between 7 AM and 9 PM. We don't honor it during named winter storms or Vikings playoff games — fair's fair.",
     category: 'Guarantee',
   },
   {
     id: 'faq-3',
-    question: 'DO YOU ACTUALLY STOCK WATER HEATERS?',
-    answer: 'Yes. Our Big Lake hub keeps 50+ Rheem and AO Smith units on-hand. Same-day swap is our standard, not an exception.',
+    question: 'Do you actually stock water heaters?',
+    answer: 'Bradford White 40 and 50 gallon tanks, plus 3 tankless models, live on our trucks. 80% of replacements are same-day.',
     category: 'Service',
   },
   {
     id: 'faq-4',
-    question: 'WHAT DOES FINANCING LOOK LIKE?',
-    answer: '60-second approval on your phone via Synchrony. 0% APR options available for full system installs and major plumbing re-pipes.',
+    question: 'What does financing look like?',
+    answer: '0% APR for 18 months on jobs over $1,500 through Synchrony. Soft credit pull, takes 90 seconds.',
     category: 'Pricing',
   },
   {
     id: 'faq-5',
-    question: 'CAN I GET A SECOND OPINION ON ANOTHER PLUMBER\'S QUOTE?',
-    answer: 'Yes. Send us the quote. We\'ll verify the parts list and labor hours. If it\'s fair, we\'ll tell you. If it\'s inflated, we\'ll beat it.',
+    question: "Can I get a second opinion on another plumber's quote?",
+    answer: "Yes. Free. We'll come look, give you our number in writing, and tell you honestly if the other guy's quote is fair.",
     category: 'Trust',
   },
   {
     id: 'faq-6',
-    question: 'ARE YOU REALLY FAMILY-OWNED?',
-    answer: 'Yes. Ray founded it, Hannah runs operations, and Eli\'s in the field. One family, one reputation, local Twin Cities only.',
+    question: 'Are you really family-owned?',
+    answer: 'Three Thelens on this page. Founded by Don Thelen in 1962, run by his grandson Ray since 2009. The accounting department is his wife. The dispatcher is his nephew.',
     category: 'Trust',
   },
 ];
@@ -214,10 +147,10 @@ export const TECHNICIANS: Technician[] = [
   {
     id: 'ray',
     name: 'RAY THELEN',
-    role: "FOUNDER P'B- MASTER PLUMBER",
-    bio: '24 years in Twin Cities pipe. Cold Spring hockey kid. Still does ride-alongs on Fridays.',
-    since: 'SINCE 2002',
-    location: 'NE MPLS',
+    role: "Owner · Master Plumber · 31 years",
+    bio: '"If I wouldn\'t do it in my mother\'s basement, we don\'t do it here."',
+    since: 'SINCE 1962',
+    location: 'RAY.JPG',
     photoUrl: 'https://picsum.photos/seed/ray/600/800',
     color: 'rgba(75, 45, 35, 0.7)',
     filename: 'RAY.JPG'
@@ -225,10 +158,10 @@ export const TECHNICIANS: Technician[] = [
   {
     id: 'hannah',
     name: 'HANNAH THELEN',
-    role: 'OPERATIONS + DISPATCH',
-    bio: "Runs the board. Knows every tech's voice, every van's mileage, and every ZIP's drive time.",
+    role: 'Lead Technician · 9 years on the truck',
+    bio: '"Half my calls are people apologizing for not calling sooner. Don\'t."',
     since: 'JOINED 2014',
-    location: 'ST. PAUL',
+    location: 'HANNAH.JPG',
     photoUrl: 'https://picsum.photos/seed/hannah/600/800',
     color: 'rgba(35, 55, 75, 0.7)',
     filename: 'HANNAH.JPG'
@@ -236,10 +169,10 @@ export const TECHNICIANS: Technician[] = [
   {
     id: 'miguel',
     name: 'MIGUEL CARRANZA',
-    role: "MASTER PLUMBER P'B- 9 YRS",
-    bio: 'Hydro-jet specialist. Breaks tie with a chess clock and a clean invoice.',
+    role: "Senior Plumber · 14 years",
+    bio: '"I want to leave the house cleaner than I found it. Always."',
     since: 'PIBUBh: 4.96',
-    location: 'ROSEVILLE',
+    location: 'MIGUEL.JPG',
     photoUrl: 'https://picsum.photos/seed/miguel/600/800',
     color: 'rgba(65, 55, 35, 0.7)',
     filename: 'MIGUEL.JPG'
@@ -247,10 +180,10 @@ export const TECHNICIANS: Technician[] = [
   {
     id: 'eli',
     name: 'ELI THELEN',
-    role: "MASTER PLUMBER P'B- 6 YRS",
-    bio: 'Re-pipes, remodels, and the person who translates your contractor\'s hand-waving into a real scope.',
+    role: "Dispatch · 4 years",
+    bio: '"I\'m the voice on the phone at 2 AM. I\'ll get someone moving before we hang up."',
     since: 'SINCE 2019',
-    location: 'MINNEAPOLIS',
+    location: 'ELI.JPG',
     photoUrl: 'https://picsum.photos/seed/eli/600/800',
     color: 'rgba(35, 75, 55, 0.7)',
     filename: 'ELI.JPG'

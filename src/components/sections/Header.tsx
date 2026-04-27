@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -12,13 +12,12 @@ import {
 } from '@/components/ui/sheet';
 import { COMPANY_INFO } from '@/lib/data';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: 'Services', href: '#services' },
-  { name: 'Emergency', href: '#emergency' },
-  { name: 'Reviews', href: '#testimonials' },
+  { name: 'Pricing', href: '#pricing' },
   { name: 'About', href: '#team' },
+  { name: 'Reviews', href: '#testimonials' },
 ];
 
 export const Header = () => {
@@ -36,16 +35,21 @@ export const Header = () => {
     <motion.header
       className="sticky top-0 z-50 w-full border-b border-black bg-background"
       animate={{
-        height: isScrolled ? '64px' : '80px',
+        height: isScrolled ? '64px' : '96px',
       }}
       transition={{ duration: 0.2 }}
     >
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
-        <Link href="/" className="font-headline text-2xl tracking-tighter">
-          THELEN PLUMBING CO.
-        </Link>
+        <div className="flex flex-col">
+          <Link href="/" className="font-headline text-2xl tracking-tighter uppercase leading-none">
+            {COMPANY_INFO.name}
+          </Link>
+          <span className="font-body text-[10px] uppercase font-semibold tracking-widest text-muted-foreground mt-1">
+            {COMPANY_INFO.tagline}
+          </span>
+        </div>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -57,22 +61,26 @@ export const Header = () => {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-6">
-          <div className="px-4 py-1 border border-black font-code text-[11px] uppercase font-bold bg-white shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
-            LIC #PM123456
+        <div className="hidden lg:flex items-center gap-6">
+          <div className="text-right">
+            <p className="font-code text-[10px] font-black uppercase tracking-widest leading-none mb-1">
+              ★ {COMPANY_INFO.stats.rating} ({COMPANY_INFO.stats.reviewCount.toLocaleString()} reviews)
+            </p>
+            <p className="font-code text-[9px] font-bold text-muted-foreground uppercase tracking-widest leading-none">
+              LIC #MN-PC042881
+            </p>
           </div>
           <Button
             className="bg-black text-white hover:bg-black/90 font-code text-[11px] h-10 px-6 uppercase tracking-widest rounded-none border border-black flex gap-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all"
             asChild
           >
             <a href={`tel:${COMPANY_INFO.phone}`}>
-              <Phone className="h-3 w-3" />
-              {COMPANY_INFO.phone}
+              REQUEST SERVICE →
             </a>
           </Button>
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <button className="p-2">
@@ -85,12 +93,15 @@ export const Header = () => {
                   <SheetClose key={item.name} asChild>
                     <Link
                       href={item.href}
-                      className="text-4xl font-headline border-b border-black pb-4"
+                      className="text-4xl font-headline border-b border-black pb-4 uppercase"
                     >
                       {item.name}
                     </Link>
                   </SheetClose>
                 ))}
+                <a href={`tel:${COMPANY_INFO.phone}`} className="text-2xl font-code uppercase font-bold text-primary">
+                  {COMPANY_INFO.phone}
+                </a>
               </div>
             </SheetContent>
           </Sheet>
