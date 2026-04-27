@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock } from 'lucide-react';
 import { COMPANY_INFO, OFFICES, SERVICE_CITIES } from '@/lib/data';
+import Link from 'next/link';
 
 export const ServiceAreas = () => {
   return (
@@ -32,7 +33,7 @@ export const ServiceAreas = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            {/* SVG Placeholder for abstract map */}
+            {/* SVG Illustration of abstract map */}
             <div className="absolute inset-0 flex items-center justify-center bg-[#F5F1EA]">
               <svg viewBox="0 0 200 200" className="w-full h-full p-12">
                 <path d="M40,50 Q100,20 160,50 Q180,100 160,150 Q100,180 40,150 Q20,100 40,50" fill="none" stroke="black" strokeWidth="0.5" strokeDasharray="2 2" />
@@ -85,4 +86,3 @@ export const ServiceAreas = () => {
     </section>
   );
 };
-import Link from 'next/link';
