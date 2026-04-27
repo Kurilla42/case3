@@ -6,17 +6,17 @@ import { ImageComparison } from '@/components/ui/image-comparison';
 const cases = [
   {
     id: 'case-1',
-    location: 'Edina · January 2026',
-    title: '3 AM FROZEN PIPE BURST',
-    desc: '"Polar vortex took out a 1956 galvanized line behind the dryer. We re-piped to copper, dried the wall cavity, and were out by 6:40 AM."',
+    location: 'Edina, MN  ·  January 2026  ·  Single visit · 4 hrs total',
+    title: 'FROZEN GALVANIZED LINE — BURST AT 2:47 AM',
+    desc: '"Old galvanized vertical split during the cold snap — homeowner caught it before it took the basement. We re-routed to type-L copper with a U-bend off the main, dropped a dehumidifier on the wall, and were out before sunrise."',
     before: 'https://i.ibb.co/pjMs4G6X/7cdac66c-4a0d-4255-88d2-a59d6a204d2f.jpg',
     after: 'https://i.ibb.co/4R07jXvw/c133fc33-88ee-46a8-a5cc-a1aa2e481cc5.png',
   },
   {
     id: 'case-2',
-    location: 'St. Paul · March 2026',
-    title: 'RUSTED TANK REPLACEMENT',
-    desc: '"40-gallon tank failed at year 13. Same-day Bradford White install. Old tank hauled. Insurance got the photos in their inbox by lunch."',
+    location: 'St. Paul, MN  ·  May 2026  ·  Same-day install · 3 hrs 40 min',
+    title: 'WATER HEATER FAILURE — RUST AT YEAR 13',
+    desc: '"Tank was leaking from the base and streaking rust across the slab. Pulled it, hauled it, dropped in a new 40-gal Bradford White with a fresh expansion tank, seismic strap, and a yellow flex on the gas line. Photos to the homeowner\'s insurance the same afternoon."',
     before: 'https://i.ibb.co/Vc5gXzJv/4598958c-ccb8-4a0f-a0d8-e2422a7e7de0.jpg',
     after: 'https://i.ibb.co/JwnHFv18/f48c71b0-cf66-4d1a-8346-394c2397fe50.png',
   }
