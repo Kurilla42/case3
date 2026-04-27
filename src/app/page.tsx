@@ -5,7 +5,6 @@ import { EmergencyStrip } from '@/components/sections/EmergencyStrip';
 import { Services } from '@/components/sections/Services';
 import { CostEstimator } from '@/components/sections/CostEstimator';
 import { EmergencyGuarantee } from '@/components/sections/EmergencyGuarantee';
-import { StatsStats } from '@/components/sections/StatsStats';
 import { Process } from '@/components/sections/Process';
 import { Team } from '@/components/sections/Team';
 import { BeforeAfter } from '@/components/sections/BeforeAfter';
@@ -28,7 +27,6 @@ export default function LandingPage() {
       <Services />
       <CostEstimator />
       <EmergencyGuarantee />
-      <StatsStats />
       <Process />
       <Team />
       <BeforeAfter />
