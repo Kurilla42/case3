@@ -22,32 +22,35 @@ export const Footer = () => {
             </p>
           </div>
 
-          {/* Column 2: Services */}
-          <div className="space-y-6">
-            <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">SERVICES</p>
-            <ul className="space-y-3">
-              {['Pipe Repair', 'Water Heaters', 'Drain Clearing', 'Fixtures', 'Leak Detection', 'Commercial', 'Membership', 'Financing'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Wrapper for side-by-side links on mobile */}
+          <div className="grid grid-cols-2 gap-8 md:contents">
+            {/* Column 2: Services */}
+            <div className="space-y-6">
+              <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">SERVICES</p>
+              <ul className="space-y-3">
+                {['Pipe Repair', 'Water Heaters', 'Drain Clearing', 'Fixtures', 'Leak Detection', 'Commercial', 'Membership', 'Financing'].map((item) => (
+                  <li key={item}>
+                    <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Column 3: Company */}
-          <div className="space-y-6">
-            <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">COMPANY</p>
-            <ul className="space-y-3">
-              {['About', 'The Crew', 'Reviews', 'Service Area', 'Careers', 'Press', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Column 3: Company */}
+            <div className="space-y-6">
+              <p className="font-code text-[11px] uppercase font-black tracking-[0.2em] text-muted-foreground">COMPANY</p>
+              <ul className="space-y-3">
+                {['About', 'The Crew', 'Reviews', 'Service Area', 'Careers', 'Press', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <Link href="#" className="font-code text-[10px] font-black text-muted-foreground hover:text-black uppercase tracking-widest transition-colors">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Column 4: Contact */}
@@ -74,7 +77,7 @@ export const Footer = () => {
           <div className="flex gap-6">
             {['PRIVACY', 'TERMS'].map((item) => (
               <Link key={item} href="#" className="font-code text-[9px] font-black text-muted-foreground hover:text-black uppercase tracking-widest">
-                {item} B-
+                {item}
               </Link>
             ))}
           </div>
