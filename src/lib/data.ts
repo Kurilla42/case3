@@ -15,41 +15,24 @@ export const COMPANY_INFO = {
 };
 
 export const ESTIMATE_DATA = {
-  services: [
-    { id: 'plumbing', label: 'Plumbing' },
-    { id: 'heating', label: 'Heating' },
-    { id: 'cooling', label: 'Cooling' },
-    { id: 'drain', label: 'Drain' },
+  issues: [
+    { id: 'clogged-drain', label: 'CLOGGED DRAIN', sub: 'KITCHEN / BATH', base: [150, 450] },
+    { id: 'active-leak', label: 'ACTIVE LEAK', sub: 'PIPE / FIXTURE', base: [200, 600] },
+    { id: 'water-heater', label: 'WATER HEATER', sub: 'REPAIR OR SWAP', base: [800, 2500] },
+    { id: 'sewer-line', label: 'SEWER LINE', sub: 'MAIN DRAIN', base: [350, 1500] },
+    { id: 'sump-pump', label: 'SUMP PUMP', sub: 'INSTALL / REPLACE', base: [400, 1200] },
+    { id: 'remodel', label: 'REMODEL', sub: 'KITCHEN / BATH', base: [1500, 5000] },
   ],
-  issues: {
-    plumbing: ['Water heater', 'Burst pipe', 'Leaky faucet', 'Toilet issue', 'Other'],
-    heating: ['Furnace repair', 'Furnace install', 'Maintenance', 'No heat emergency'],
-    cooling: ['AC repair', 'AC install', 'Not cooling', 'Maintenance'],
-    drain: ['Slow drain', 'Fully clogged', 'Sewer backup', 'Camera inspection'],
-  },
+  homeSizes: [
+    { id: 'small', label: 'CONDO / TOWNHOME', sub: 'UNDER 1,400 SQFT', mult: 0.8 },
+    { id: 'medium', label: 'TYPICAL HOME', sub: '1,400 - 2,800 SQFT', mult: 1.0 },
+    { id: 'large', label: 'LARGE / MULTI-LEVEL', sub: '2,800+', mult: 1.3 },
+  ],
   urgency: [
-    { id: 'urgent', label: "Today — it's urgent", multiplier: 1.2 },
-    { id: 'week', label: 'This week', multiplier: 1.0 },
-    { id: 'planning', label: 'Just planning ahead', multiplier: 0.9 },
+    { id: 'normal', label: 'SCHEDULE NORMALLY', sub: 'NEXT 2 DAYS', mult: 1.0 },
+    { id: 'same-day', label: 'SAME-DAY', sub: 'TODAY, BUSINESS HRS', mult: 1.2 },
+    { id: 'emergency', label: 'EMERGENCY', sub: 'AFTER-HOURS / 24/7', mult: 1.5 },
   ],
-  baseRanges: {
-    'Water heater': [600, 2500],
-    'Burst pipe': [300, 1500],
-    'Leaky faucet': [150, 450],
-    'Toilet issue': [149, 600],
-    'Other': [149, 1000],
-    'Furnace repair': [250, 1200],
-    'Furnace install': [3500, 8000],
-    'Maintenance': [89, 189],
-    'No heat emergency': [289, 1500],
-    'AC repair': [250, 1500],
-    'AC install': [4000, 9000],
-    'Not cooling': [189, 1200],
-    'Slow drain': [129, 350],
-    'Fully clogged': [189, 500],
-    'Sewer backup': [350, 2500],
-    'Camera inspection': [250, 500],
-  } as Record<string, [number, number]>
 };
 
 export const OFFICES: Office[] = [
