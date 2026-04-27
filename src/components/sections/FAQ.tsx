@@ -16,14 +16,16 @@ export const FAQ = () => {
     <section id="faq" className="py-24 bg-background overflow-hidden border-t">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-start gap-8 mb-16">
-          <p className="font-code text-[11px] uppercase tracking-widest text-muted-foreground font-black pt-4">
-            10 / FAQ
-          </p>
-          <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0 flex-1" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>
-            The questions <br />
-            we get <span className="text-primary">every</span> <br />
-            week.
-          </h2>
+          <div className="space-y-4 flex-1">
+            <p className="font-code text-[11px] uppercase tracking-widest text-muted-foreground font-black">
+              11 / FAQ
+            </p>
+            <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>
+              The questions <br />
+              we get <span className="text-primary">every</span> <br />
+              week.
+            </h2>
+          </div>
         </div>
 
         <div className="border-y-[1px] border-black">

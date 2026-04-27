@@ -37,7 +37,7 @@ export const Process = () => {
         <div className="mb-20 space-y-8">
           <div className="flex items-center gap-4">
             <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">
-              04 / HOW IT WORKS
+              05 / PROCESS
             </p>
           </div>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0 max-w-4xl" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>

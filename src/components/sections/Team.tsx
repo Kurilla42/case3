@@ -11,7 +11,7 @@ export const Team = () => {
         {/* Section Header */}
         <div className="mb-20">
           <p className="font-code text-[11px] uppercase tracking-widest text-muted-foreground font-black mb-4">
-            05 / TEAM
+            06 / CREW
           </p>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 7rem)' }}>
             The people who'll<br />actually show up.

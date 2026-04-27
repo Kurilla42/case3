@@ -10,7 +10,7 @@ export const ReviewsMarquee = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="space-y-4">
             <p className="font-body text-[12px] uppercase tracking-[0.12em] font-semibold text-graphite">
-              08 / VERIFIED PROOF
+              09 / REVIEWS
             </p>
             <h2 className="text-ink font-extrabold leading-[1.02] tracking-[-0.015em] uppercase m-0" style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}>
               Twin Cities homeowners <br />

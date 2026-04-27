@@ -30,7 +30,7 @@ export const MembershipCards = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 space-y-4">
           <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">
-            07 / MAINTENANCE
+            08 / MEMBERSHIP
           </p>
           <h2 className="leading-[0.95] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}>
             The Home Club.<br/>Because pipes don't fail politely.

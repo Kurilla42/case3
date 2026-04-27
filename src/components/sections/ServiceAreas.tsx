@@ -13,7 +13,7 @@ export const ServiceAreas = () => {
         {/* Header */}
         <div className="mb-16">
           <p className="font-code uppercase text-[11px] tracking-widest text-muted-foreground font-black mb-4">
-            09 / GEOGRAPHY
+            10 / ZONE
           </p>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>
             We show up here.

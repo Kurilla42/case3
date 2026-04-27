@@ -19,6 +19,9 @@ export const Services = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-black pb-8 mb-12 gap-4">
           <div className="space-y-2">
+            <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">
+              02 / SERVICES
+            </p>
             <h2 className="text-ink font-extrabold uppercase leading-[1.02] tracking-[-0.015em]" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
               CORE SERVICES
             </h2>
@@ -26,7 +29,6 @@ export const Services = () => {
               6 things we do · all flat-rate · all in writing
             </p>
           </div>
-          <span className="font-body text-[12px] uppercase text-graphite font-semibold tracking-[0.12em]">REF: SEC-02</span>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

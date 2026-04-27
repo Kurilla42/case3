@@ -28,7 +28,7 @@ export const BeforeAfter = () => {
       <div className="container mx-auto">
         <div className="mb-16 space-y-4">
           <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">
-            06 / PROOF OF WORK
+            07 / FIELD LOG
           </p>
           <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase m-0" style={{ fontSize: 'clamp(3rem, 6vw, 6.5rem)' }}>
             What we walked into.<br />

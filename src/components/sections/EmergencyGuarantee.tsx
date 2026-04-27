@@ -19,7 +19,7 @@ export const EmergencyGuarantee = () => {
           {/* Left Column: Heading */}
           <div className="space-y-6 lg:space-y-10">
             <p className="font-body text-[12px] uppercase font-semibold tracking-[0.12em] text-white/80">
-              THE GUARANTEE
+              04 / GUARANTEE
             </p>
             <h2 
               className="text-white font-extrabold tracking-[-0.02em] uppercase m-0" 
