@@ -26,48 +26,38 @@ export const Team = () => {
           {TECHNICIANS.map((tech) => (
             <div 
               key={tech.id} 
-              className="bg-white border border-black flex flex-col group cursor-pointer transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              className="flex flex-col group cursor-pointer"
             >
-              {/* Portrait Header */}
-              <div className="relative aspect-[3/4] overflow-hidden border-b border-black">
-                <Image
-                  src={tech.photoUrl}
-                  alt={tech.name}
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                />
+              {/* Polaroid Photo Wrapper */}
+              <div 
+                className="relative aspect-[3/4] border-2 border-black bg-background p-3 pb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              >
+                <div className="relative w-full h-full overflow-hidden border border-black/5 bg-black/5">
+                  <Image
+                    src={tech.photoUrl}
+                    alt={tech.name}
+                    fill
+                    className="object-cover"
+                    style={{ 
+                      filter: 'grayscale(0.15) contrast(1.05) brightness(0.97) sepia(0.08)' 
+                    }}
+                  />
+                </div>
                 
-                {/* Diagonal Stripes Overlay */}
-                <div 
-                  className="absolute inset-0 pointer-events-none mix-blend-multiply" 
-                  style={{
-                    backgroundColor: tech.color,
-                    backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.1) 11px)`
-                  }}
-                />
-
-                {/* Portrait Technical Label */}
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="font-code text-[8px] uppercase font-black text-white/60 tracking-widest truncate">
-                    {tech.location}
-                  </p>
+                {/* Polaroid Caption Label */}
+                <div className="absolute bottom-4 left-3 font-code text-[9px] uppercase tracking-widest text-graphite font-black">
+                  {tech.name} · {tech.role.split('·')[0]}
                 </div>
               </div>
 
-              {/* Content Area */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="font-headline text-2xl tracking-tighter uppercase leading-none mb-1">
-                      {tech.name}
-                    </h3>
-                    <p className="font-code text-[10px] uppercase font-black text-primary tracking-widest">
-                      {tech.role}
-                    </p>
-                  </div>
-                  
-                  <p className="font-body text-sm text-black leading-relaxed italic">
-                    {tech.bio}
+              {/* Bio content area */}
+              <div className="pt-6 px-1 space-y-4">
+                <p className="font-body text-sm text-black leading-relaxed italic">
+                  {tech.bio}
+                </p>
+                <div className="pt-2 border-t border-black/5">
+                  <p className="font-code text-[10px] uppercase font-black text-primary tracking-tighter">
+                    {tech.role}
                   </p>
                 </div>
               </div>
