@@ -63,7 +63,7 @@ export const Hero = () => {
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-[4/5] w-full border-2 border-black bg-black group overflow-hidden shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
              <Image 
-                src="/images/Documentary-style_photograph_of_202604280055 (1).webp" 
+                src="https://i.ibb.co/NqbLPk0/Documentary-style-photograph-of-202604280055-1.webp" 
                 alt="Thelen Crew" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105"

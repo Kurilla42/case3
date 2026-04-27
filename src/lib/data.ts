@@ -151,9 +151,9 @@ export const TECHNICIANS: Technician[] = [
     bio: '"If I wouldn\'t do it in my mother\'s basement, we don\'t do it here."',
     since: 'SINCE 1962',
     location: 'RAY',
-    photoUrl: '/images/Environmental_portrait_of_202604280059 (1).webp',
+    photoUrl: 'https://i.ibb.co/yF5nxCYw/Environmental-portrait-of-202604280059-1.webp',
     color: 'rgba(75, 45, 35, 0.7)',
-    filename: 'Environmental_portrait_of_202604280059 (1).webp'
+    filename: 'Environmental-portrait-of-202604280059-1.webp'
   },
   {
     id: 'hannah',
@@ -162,9 +162,9 @@ export const TECHNICIANS: Technician[] = [
     bio: '"Half my calls are people apologizing for not calling sooner. Don\'t."',
     since: 'JOINED 2014',
     location: 'HANNAH',
-    photoUrl: '/images/Environmental_portrait_of_202604280058.webp',
+    photoUrl: 'https://i.ibb.co/jP27rmDb/Environmental-portrait-of-202604280058.webp',
     color: 'rgba(35, 55, 75, 0.7)',
-    filename: 'Environmental_portrait_of_202604280058.webp'
+    filename: 'Environmental-portrait-of-202604280058.webp'
   },
   {
     id: 'miguel',
@@ -173,9 +173,9 @@ export const TECHNICIANS: Technician[] = [
     bio: '"I want to leave the house cleaner than I found it. Always."',
     since: 'PIBUBh: 4.96',
     location: 'MIGUEL',
-    photoUrl: '/images/Environmental_portrait_of_202604280058 (1).webp',
+    photoUrl: 'https://i.ibb.co/jkkXhbrj/Environmental-portrait-of-202604280058-1.webp',
     color: 'rgba(65, 55, 35, 0.7)',
-    filename: 'Environmental_portrait_of_202604280058 (1).webp'
+    filename: 'Environmental-portrait-of-202604280058-1.webp'
   },
   {
     id: 'eli',
@@ -184,8 +184,8 @@ export const TECHNICIANS: Technician[] = [
     bio: '"I\'m the voice on the phone at 2 AM. I\'ll get someone moving before we hang up."',
     since: 'SINCE 2019',
     location: 'ELI',
-    photoUrl: '/images/Environmental_portrait_of_202604280059.webp',
+    photoUrl: 'https://i.ibb.co/h1rbQ77P/Environmental-portrait-of-202604280059.webp',
     color: 'rgba(35, 75, 55, 0.7)',
-    filename: 'Environmental_portrait_of_202604280059.webp'
+    filename: 'Environmental-portrait-of-202604280059.webp'
   }
 ];
