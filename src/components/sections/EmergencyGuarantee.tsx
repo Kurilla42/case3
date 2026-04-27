@@ -21,7 +21,14 @@ export const EmergencyGuarantee = () => {
             <p className="font-body text-[12px] uppercase font-semibold tracking-[0.12em] text-white/80">
               THE GUARANTEE
             </p>
-            <h2 className="text-white font-extrabold leading-[0.95] tracking-[-0.02em] uppercase m-0" style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)' }}>
+            <h2 
+              className="text-white font-extrabold tracking-[-0.02em] uppercase m-0" 
+              style={{ 
+                fontSize: 'clamp(1.875rem, 4.5vw, 3.25rem)',
+                lineHeight: '1.08',
+                maxWidth: '22ch'
+              }}
+            >
               If our plumber isn't at your door <br />
               within 89 minutes, the diagnostic's <br />
               on us.
