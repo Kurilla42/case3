@@ -217,56 +217,49 @@ export const FAQS: FAQ[] = [
   },
 ];
 
-export const OFFERS: PromoOffer[] = [
-  {
-    id: 'new-customer',
-    title: '$50 Off First Service',
-    description: 'Valid for new residential customers on any repair over $250.',
-    code: 'WELCOME50',
-  },
-];
-
 export const TECHNICIANS: Technician[] = [
   {
-    id: 'tech-1',
-    name: 'Taylor',
-    role: 'Lead Plumber',
-    yearsExperience: 12,
-    photoUrl: 'https://picsum.photos/seed/tech-taylor/800/1066',
-    certifications: [
-      'MN Master Plumber #PM123456',
-      'Gas Piping Certified',
-      'Backflow Assembly Tester',
-    ],
-    specialties: ['Tankless Water Heaters', 'Gas Lines', 'Boilers'],
-    quote: "If I wouldn't do it in my own house, I won't sell it to yours.",
+    id: 'ray',
+    name: 'RAY THELEN',
+    role: "FOUNDER P'B- MASTER PLUMBER",
+    bio: '24 years in Twin Cities pipe. Cold Spring hockey kid. Still does ride-alongs on Fridays.',
+    since: 'SINCE 2002',
+    location: 'NE MPLS',
+    photoUrl: 'https://picsum.photos/seed/ray/600/800',
+    color: 'rgba(75, 45, 35, 0.7)',
+    filename: 'RAY.JPG'
   },
   {
-    id: 'tech-2',
-    name: 'Mike',
-    role: 'Senior HVAC Tech',
-    yearsExperience: 9,
-    photoUrl: 'https://picsum.photos/seed/tech-mike/800/1066',
-    certifications: [
-      'EPA 608 Universal',
-      'NATE Certified',
-      'High Efficiency Systems Specialist',
-    ],
-    specialties: ['Furnace Repair', 'AC Installation', 'Heat Pumps'],
-    quote: "Precision isn't just a goal; it's the standard for every home I enter.",
+    id: 'hannah',
+    name: 'HANNAH THELEN',
+    role: 'OPERATIONS + DISPATCH',
+    bio: "Runs the board. Knows every tech's voice, every van's mileage, and every ZIP's drive time.",
+    since: 'JOINED 2014',
+    location: 'ST. PAUL',
+    photoUrl: 'https://picsum.photos/seed/hannah/600/800',
+    color: 'rgba(35, 55, 75, 0.7)',
+    filename: 'HANNAH.JPG'
   },
   {
-    id: 'tech-3',
-    name: 'Sarah',
-    role: 'Service Manager',
-    yearsExperience: 8,
-    photoUrl: 'https://picsum.photos/seed/tech-sarah/800/1066',
-    certifications: [
-      'Advanced Customer Service Lead',
-      'Operational Efficiency Expert',
-      'Safety & Compliance Officer',
-    ],
-    specialties: ['System Diagnostics', 'Project Management', 'Quality Assurance'],
-    quote: "My job is to ensure every service call ends with a homeowner breathing a sigh of relief.",
+    id: 'miguel',
+    name: 'MIGUEL CARRANZA',
+    role: "MASTER PLUMBER P'B- 9 YRS",
+    bio: 'Hydro-jet specialist. Breaks tie with a chess clock and a clean invoice.',
+    since: 'PIBUBh: 4.96',
+    location: 'ROSEVILLE',
+    photoUrl: 'https://picsum.photos/seed/miguel/600/800',
+    color: 'rgba(65, 55, 35, 0.7)',
+    filename: 'MIGUEL.JPG'
   },
+  {
+    id: 'eli',
+    name: 'ELI THELEN',
+    role: "MASTER PLUMBER P'B- 6 YRS",
+    bio: 'Re-pipes, remodels, and the person who translates your contractor\'s hand-waving into a real scope.',
+    since: 'SINCE 2019',
+    location: 'MINNEAPOLIS',
+    photoUrl: 'https://picsum.photos/seed/eli/600/800',
+    color: 'rgba(35, 75, 55, 0.7)',
+    filename: 'ELI.JPG'
+  }
 ];

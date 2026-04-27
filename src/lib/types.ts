@@ -44,9 +44,10 @@ export interface Technician {
   id: string;
   name: string;
   role: string;
-  yearsExperience: number;
+  bio: string;
+  since: string;
+  location: string;
   photoUrl: string;
-  certifications: string[];
-  specialties: string[];
-  quote: string;
+  color: string;
+  filename: string;
 }
