@@ -22,11 +22,11 @@ export const Team = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {TECHNICIANS.map((tech) => (
             <div 
               key={tech.id} 
-              className="bg-white border border-black flex flex-col group cursor-pointer transition-all hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              className="bg-white border border-black flex flex-col group cursor-pointer transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               {/* Portrait Header */}
               <div className="relative aspect-[3/4] overflow-hidden border-b border-black">
