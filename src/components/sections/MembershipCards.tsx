@@ -10,15 +10,17 @@ const plans = [
     price: "12",
     features: ["2 HVAC tune-ups (spring + fall)", "1 plumbing inspection", "10% off all service calls", "Priority dispatch (we move you ahead)"],
     color: "bg-white",
-    textColor: "text-dark"
+    textColor: "text-dark",
+    buttonColor: "bg-primary text-white hover:bg-primary/90"
   },
   {
     name: "PLATINUM PLAN",
     price: "29",
     features: ["Everything in Tune-Up Club", "Zero dispatch fees, ever", "Free water-heater flush annually", "5-year extended warranty on installs"],
-    color: "bg-dark",
+    color: "bg-primary",
     textColor: "text-white",
-    highlight: true
+    highlight: true,
+    buttonColor: "bg-dark text-white hover:bg-dark/90"
   }
 ];
 
@@ -42,7 +44,7 @@ export const MembershipCards = () => {
           {plans.map((plan, i) => (
             <div key={i} className={`${plan.color} ${plan.textColor} p-12 border border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] relative`}>
               {plan.highlight && (
-                <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 font-code text-[10px] font-black shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]">MOST POPULAR</div>
+                <div className="absolute top-0 right-0 bg-dark text-white px-4 py-1 font-code text-[10px] font-black shadow-[-2px_2px_0px_0px_rgba(0,0,0,1)]">MOST POPULAR</div>
               )}
               <div className="space-y-8">
                 <div>
@@ -55,12 +57,12 @@ export const MembershipCards = () => {
                 <div className="space-y-4">
                   {plan.features.map((f, j) => (
                     <div key={j} className="flex items-center gap-3">
-                      <Check size={18} className="text-primary" />
+                      <Check size={18} className={plan.textColor === 'text-white' ? 'text-dark' : 'text-primary'} />
                       <span className="font-bold text-lg leading-tight">{f}</span>
                     </div>
                   ))}
                 </div>
-                <Button className={`w-full h-16 text-lg font-headline uppercase rounded-none border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all ${plan.highlight ? 'bg-primary text-white hover:bg-primary/90' : 'bg-dark text-white'}`}>
+                <Button className={`w-full h-16 text-lg font-headline uppercase rounded-none border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all ${plan.buttonColor}`}>
                   JOIN {plan.name.split(' ')[0]} →
                 </Button>
               </div>

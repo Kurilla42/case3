@@ -49,22 +49,6 @@ export const ServiceAreas = () => {
             {/* Map Grid Pattern Overlay (Visual flair) */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
-            {/* Primary Location Card */}
-            <div className="absolute top-4 left-4 w-64 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] p-4 flex justify-between items-start z-30">
-              <div className="space-y-0.5">
-                <div className="flex items-center gap-2 mb-1">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                  <h4 className="font-headline text-[14px] uppercase tracking-tight leading-none text-black">BIG LAKE HEADQUARTERS</h4>
-                </div>
-                <p className="font-body text-[11px] text-muted-foreground uppercase font-medium">Main Office & Dispatch</p>
-                <p className="font-code text-[9px] text-primary font-black uppercase tracking-widest pt-1">Open 24/7</p>
-              </div>
-              <div className="flex gap-3 text-black/40">
-                <Navigation size={16} className="cursor-pointer hover:text-primary transition-colors" />
-                <ExternalLink size={16} className="cursor-pointer hover:text-primary transition-colors" />
-              </div>
-            </div>
-
             {/* Bottom Technical Footer */}
             <div className="absolute bottom-0 right-0 left-0 bg-white/60 backdrop-blur-[2px] h-5 flex items-center justify-between px-3 z-30 pointer-events-none">
               <div className="flex gap-2">

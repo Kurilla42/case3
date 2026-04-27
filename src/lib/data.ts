@@ -19,8 +19,8 @@ export const ESTIMATE_DATA = {
     { id: 'clogged-drain', label: 'CLOGGED DRAIN', sub: 'SLOW OR STOPPED', base: [149, 225] },
     { id: 'pipe-repair', label: 'PIPE REPAIR', sub: 'ACTIVE LEAK', base: [189, 450] },
     { id: 'water-heater', label: 'WATER HEATER', sub: 'NO HOT WATER', base: [1200, 2400] },
-    { id: 'ac-repair', label: 'AC REPAIR', sub: 'BLOWS WARM AIR', base: [275, 800] },
-    { id: 'heating-repair', label: 'HEATING REPAIR', sub: 'NO HEAT', base: [225, 650] },
+    { id: 'fixtures', label: 'FIXTURES & FAUCETS', sub: 'REPAIR OR SWAP', base: [129, 350] },
+    { id: 'commercial', label: 'COMMERCIAL', sub: 'B2B SERVICES', base: [225, 900] },
     { id: 'leak-find', label: 'LEAK DETECTION', sub: 'HIDDEN LEAK', base: [275, 550] },
   ],
   homeSizes: [
