@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
-import { TrustStrip } from '@/components/sections/TrustStrip';
+import { EmergencyStrip } from '@/components/sections/EmergencyStrip';
 import { Services } from '@/components/sections/Services';
 import { CostEstimator } from '@/components/sections/CostEstimator';
 import { EmergencyGuarantee } from '@/components/sections/EmergencyGuarantee';
@@ -24,7 +24,7 @@ export default function LandingPage() {
     <main className="relative min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
-      <TrustStrip />
+      <EmergencyStrip />
       <Services />
       <CostEstimator />
       <EmergencyGuarantee />
