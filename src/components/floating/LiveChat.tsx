@@ -38,7 +38,7 @@ export const LiveChat = () => {
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="fixed bottom-6 right-6 z-50 md:bottom-8 md:right-8"
+            className="hidden md:flex fixed bottom-8 right-8 z-50 items-center justify-center"
           >
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -70,7 +70,7 @@ export const LiveChat = () => {
             initial={{ y: 20, opacity: 0, scale: 0.95 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 20, opacity: 0, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-50 w-[350px] bg-white rounded-3xl shadow-2xl border border-black/5 overflow-hidden flex flex-col"
+            className="hidden md:flex fixed bottom-28 right-8 z-50 w-[350px] bg-white rounded-3xl shadow-2xl border border-black/5 overflow-hidden flex-col"
           >
             {/* Header */}
             <div className="bg-primary p-6 text-white">
