@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Clock } from 'lucide-react';
-import { COMPANY_INFO, OFFICES, SERVICE_CITIES } from '@/lib/data';
+import { ExternalLink, Navigation } from 'lucide-react';
+import { OFFICES, SERVICE_CITIES } from '@/lib/data';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const ServiceAreas = () => {
   return (
@@ -27,22 +28,45 @@ export const ServiceAreas = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           {/* Map Column (Left 5) */}
           <motion.div 
-            className="lg:col-span-5 relative aspect-[4/5] bg-black border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden"
+            className="lg:col-span-5 relative aspect-[4/5] bg-black border border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] overflow-hidden"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            {/* SVG Illustration of abstract map */}
-            <div className="absolute inset-0 flex items-center justify-center bg-[#F5F1EA]">
-              <svg viewBox="0 0 200 200" className="w-full h-full p-12">
-                <path d="M40,50 Q100,20 160,50 Q180,100 160,150 Q100,180 40,150 Q20,100 40,50" fill="none" stroke="black" strokeWidth="0.5" strokeDasharray="2 2" />
-                {[
-                  [60, 70], [85, 45], [130, 60], [150, 95], [120, 140], [80, 160], [50, 120], [100, 100]
-                ].map(([x, y], i) => (
-                  <circle key={i} cx={x} cy={y} r="2" fill="hsl(var(--primary))" />
-                ))}
-              </svg>
+            {/* Map Image with Grayscale Filter */}
+            <div className="absolute inset-0 w-full h-full grayscale opacity-90 contrast-125">
+              <Image 
+                src="https://picsum.photos/seed/map-area/800/1000" 
+                alt="Service Area Map" 
+                fill 
+                className="object-cover"
+                data-ai-hint="topographic map"
+              />
+            </div>
+
+            {/* Map Overlay Card (Matches Screenshot) */}
+            <div className="absolute top-4 left-4 w-64 bg-[#f8f8f8]/95 backdrop-blur-sm border border-black/10 shadow-lg p-4 flex justify-between items-start z-10">
+              <div className="space-y-0.5">
+                <h4 className="font-headline text-[16px] uppercase tracking-tight leading-none text-black">Big Lake</h4>
+                <p className="font-body text-[12px] text-muted-foreground">Big Lake, MN</p>
+              </div>
+              <div className="flex gap-4 text-muted-foreground/60">
+                <ExternalLink size={18} className="cursor-pointer hover:text-primary transition-colors" />
+                <Navigation size={18} className="cursor-pointer hover:text-primary transition-colors" />
+              </div>
+            </div>
+
+            {/* Google-style bottom bar elements */}
+            <div className="absolute bottom-2 left-2 z-10">
+              <div className="w-8 h-8 border border-black/20 bg-white/10 backdrop-blur-sm overflow-hidden rounded-sm">
+                <Image src="https://picsum.photos/seed/satellite/100/100" alt="Satellite" fill className="object-cover" />
+              </div>
+            </div>
+            <div className="absolute bottom-0 right-0 left-0 bg-white/20 backdrop-blur-[2px] h-4 flex items-center justify-end px-2 gap-2">
+              <span className="text-[7px] font-code uppercase text-black/40">Map data ©2026 Google</span>
+              <span className="text-[7px] font-code uppercase text-black/40">Terms</span>
+              <span className="text-[7px] font-code uppercase text-black/40">Report a map error</span>
             </div>
           </motion.div>
 
