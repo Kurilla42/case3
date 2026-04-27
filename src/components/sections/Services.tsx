@@ -41,20 +41,20 @@ export const Services = () => {
               <div className="flex-1 flex flex-col">
                 <div className="flex justify-between items-start mb-6">
                   <span className="font-body text-[11px] uppercase font-semibold tracking-[0.1em]">
-                    <span className="text-brass">{s.id} /</span> <span className="text-graphite uppercase">{s.label}</span>
+                    <span className="text-primary">{s.id} /</span> <span className="text-graphite uppercase">{s.label}</span>
                   </span>
                   <s.icon className="h-5 w-5 text-ink" />
                 </div>
-                <div className="mt-auto">
+                <div className="description mt-3 mb-6 flex-grow">
                   <h3 className="text-[22px] font-headline font-extrabold leading-[1.15] uppercase">{s.title}</h3>
-                  <p className="text-muted-foreground font-body text-[15px] leading-[1.55] mt-3 mb-6">{s.desc}</p>
+                  <p className="text-muted-foreground font-body text-[15px] leading-[1.55] mt-3">{s.desc}</p>
                 </div>
               </div>
               
-              <div className="pt-4 border-t-[1.5px] border-black border-dashed flex justify-between items-end mt-auto">
+              <div className="price-block pt-4 border-t-[1.5px] border-black border-dashed flex justify-between items-end mt-auto">
                 <div className="flex flex-col">
                   <span className="font-body text-[12px] font-medium text-ink-soft">{s.prefix || "Starts at"}</span>
-                  <span className="font-code text-[20px] font-medium text-brass leading-none mt-1">
+                  <span className="font-code text-[20px] font-medium text-primary leading-none mt-1">
                     {s.price === "BID" ? "QUOTE" : `$${s.price}`}
                   </span>
                 </div>
