@@ -9,16 +9,16 @@ const cases = [
     location: 'Edina · January 2026',
     title: '3 AM FROZEN PIPE BURST',
     desc: '"Polar vortex took out a 1956 galvanized line behind the dryer. We re-piped to copper, dried the wall cavity, and were out by 6:40 AM."',
-    before: 'https://picsum.photos/seed/pipe-before/800/600',
-    after: 'https://picsum.photos/seed/pipe-after/800/600',
+    before: 'https://i.ibb.co/pjMs4G6X/7cdac66c-4a0d-4255-88d2-a59d6a204d2f.jpg',
+    after: 'https://i.ibb.co/4R07jXvw/c133fc33-88ee-46a8-a5cc-a1aa2e481cc5.png',
   },
   {
     id: 'case-2',
     location: 'St. Paul · March 2026',
     title: 'RUSTED TANK REPLACEMENT',
     desc: '"40-gallon tank failed at year 13. Same-day Bradford White install. Old tank hauled. Insurance got the photos in their inbox by lunch."',
-    before: 'https://picsum.photos/seed/heater-before/800/600',
-    after: 'https://picsum.photos/seed/heater-after/800/600',
+    before: 'https://i.ibb.co/Vc5gXzJv/4598958c-ccb8-4a0f-a0d8-e2422a7e7de0.jpg',
+    after: 'https://i.ibb.co/JwnHFv18/f48c71b0-cf66-4d1a-8346-394c2397fe50.png',
   }
 ];
 
