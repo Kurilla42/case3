@@ -37,6 +37,8 @@ export const Team = () => {
                     src={tech.photoUrl}
                     alt={tech.name}
                     fill
+                    quality={95}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
                     style={{ 
                       filter: 'grayscale(0.15) contrast(1.05) brightness(0.97) sepia(0.08)' 

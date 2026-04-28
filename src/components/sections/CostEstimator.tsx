@@ -42,9 +42,9 @@ export const CostEstimator = () => {
   };
 
   return (
-    <section className="py-24 bg-background border-y border-black">
+    <section id="pricing" className="py-24 bg-background border-y border-black">
       <div className="container mx-auto px-4">
-        <div className="border border-black p-8 md:p-16 grid lg:grid-cols-2 gap-16 items-start">
+        <div className="border border-black p-6 md:p-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Side: Info */}
           <div className="space-y-10">
@@ -52,10 +52,10 @@ export const CostEstimator = () => {
               <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">
                 03 / ESTIMATOR // BUILT FROM 11,400 THELEN JOBS
               </p>
-              <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}>
+              <h2 className="text-black font-black leading-[0.85] tracking-tighter uppercase" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}>
                 A REAL NUMBER, <br /> NOT "IT DEPENDS."
               </h2>
-              <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-md">
+              <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-md">
                 Pick what's wrong and the size of your home. We'll show the range our last hundred customers paid for parts and labor, based on our flat-rate book.
               </p>
             </div>
@@ -70,12 +70,12 @@ export const CostEstimator = () => {
           </div>
 
           {/* Right Side: Selection & Results */}
-          <div className="space-y-12">
+          <div className="space-y-10 md:space-y-12">
             
             {/* Row 1: What's Happening */}
             <div className="space-y-4">
               <p className="font-code text-[10px] uppercase font-black text-muted-foreground tracking-widest">WHAT'S HAPPENING?</p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 {ESTIMATE_DATA.issues.map((item) => (
                   <button
                     key={item.id}
@@ -87,7 +87,7 @@ export const CostEstimator = () => {
                         : "bg-white text-black hover:bg-muted shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
                     )}
                   >
-                    <p className="font-headline text-[10px] sm:text-[11px] uppercase leading-none mb-1">{item.label}</p>
+                    <p className="font-headline text-[11px] uppercase leading-none mb-1">{item.label}</p>
                     <p className={cn("font-code text-[9px] uppercase font-black", selections.issue === item.id ? "text-white/60" : "text-muted-foreground")}>
                       {item.sub}
                     </p>
@@ -145,20 +145,20 @@ export const CostEstimator = () => {
             </div>
 
             {/* Result Box */}
-            <div className="bg-[#EAE3D2] border border-black p-8 relative shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <div className="bg-[#EAE3D2] border border-black p-6 md:p-8 relative shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex justify-between items-start mb-6">
                 <p className="font-code text-[10px] uppercase font-black text-muted-foreground tracking-widest">TYPICAL PRICE RANGE</p>
                 <p className="font-code text-[10px] uppercase font-black text-primary tracking-widest">±12% ACCURACY</p>
               </div>
 
               <div className="mb-8">
-                <h4 className="font-headline text-5xl md:text-6xl tracking-tighter leading-none mb-2">
+                <h4 className="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tighter leading-none mb-2">
                   ${priceRange[0]} <span className="text-primary">—</span> ${priceRange[1]}
                 </h4>
                 <div className="w-full h-[1px] bg-black/10 my-4" />
-                <div className="flex justify-between font-code text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">
+                <div className="flex flex-col sm:flex-row justify-between gap-2 font-code text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">
                   <span>MOST CUSTOMERS PAY: ${priceRange[2]}</span>
-                  <span>INCLUDES LABOR + COMMON PARTS</span>
+                  <span className="hidden sm:inline">INCLUDES LABOR + COMMON PARTS</span>
                 </div>
               </div>
 
