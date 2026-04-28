@@ -63,10 +63,11 @@ export const ServiceAreas = () => {
           {/* City Table Column (Right 7) */}
           <div className="lg:col-span-7 space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-0 border-y border-black/10">
-              {SERVICE_CITIES.map((city) => (
+              {/* Desktop Table (Full) */}
+              {SERVICE_CITIES.map((city, idx) => (
                 <div 
                   key={city.name}
-                  className="flex justify-between items-center border-b border-black/10 py-3 group hover:bg-black/[0.02] transition-colors px-2"
+                  className={`flex justify-between items-center border-b border-black/10 py-3 group hover:bg-black/[0.02] transition-colors px-2 ${idx >= 5 ? 'hidden md:flex' : 'flex'}`}
                 >
                   <span className="font-code text-[11px] font-black tracking-tighter uppercase">
                     {city.name}
@@ -79,8 +80,11 @@ export const ServiceAreas = () => {
             </div>
             
             <div className="pt-2">
-              <p className="font-code text-[11px] uppercase font-black text-muted-foreground">
+              <p className="font-code text-[11px] uppercase font-black text-muted-foreground md:block hidden">
                 + 32 more service locations · <Link href="#" className="text-primary underline hover:text-primary/80 transition-colors">ZIP lookup →</Link>
+              </p>
+              <p className="font-code text-[11px] uppercase font-black text-muted-foreground md:hidden">
+                + 42 more service locations · <Link href="#" className="text-primary underline hover:text-primary/80 transition-colors">ZIP lookup →</Link>
               </p>
             </div>
 

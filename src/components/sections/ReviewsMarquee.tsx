@@ -22,7 +22,7 @@ export const ReviewsMarquee = () => {
           </div>
           <a 
             href="#" 
-            className="font-headline text-[14px] font-bold uppercase tracking-[0.05em] text-ink border-2 border-black px-5 py-3 bg-white underline underline-offset-4 hover:bg-black hover:text-white transition-all duration-300 inline-block"
+            className="hidden md:inline-block font-headline text-[14px] font-bold uppercase tracking-[0.05em] text-ink border-2 border-black px-5 py-3 bg-white underline underline-offset-4 hover:bg-black hover:text-white transition-all duration-300"
           >
             READ ALL REVIEWS →
           </a>
@@ -34,6 +34,16 @@ export const ReviewsMarquee = () => {
           {REVIEWS.map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}
+        </div>
+        
+        {/* Mobile only CTA position */}
+        <div className="mt-12 text-center md:hidden">
+          <a 
+            href="#" 
+            className="w-full inline-block font-headline text-[14px] font-bold uppercase tracking-[0.05em] text-ink border-2 border-black px-5 py-4 bg-white underline underline-offset-4 active:bg-black active:text-white transition-all duration-300"
+          >
+            READ ALL REVIEWS →
+          </a>
         </div>
       </div>
     </section>

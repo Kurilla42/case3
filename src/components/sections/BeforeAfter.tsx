@@ -24,7 +24,7 @@ const cases = [
 
 export const BeforeAfter = () => {
   return (
-    <section className="py-24 bg-[#F5F1EA] border-t border-black px-4">
+    <section id="field-log" className="py-24 bg-[#F5F1EA] border-t border-black px-4">
       <div className="container mx-auto">
         <div className="mb-16 space-y-4">
           <p className="font-code text-[11px] uppercase tracking-widest font-black text-muted-foreground">

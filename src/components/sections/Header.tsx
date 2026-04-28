@@ -20,6 +20,18 @@ const navItems = [
   { name: 'Reviews', href: '#testimonials' },
 ];
 
+const mobileNavItems = [
+  { name: '01 / Services', href: '#services' },
+  { name: '02 / Estimator', href: '#pricing' },
+  { name: '03 / Process', href: '#process' },
+  { name: '04 / Crew', href: '#team' },
+  { name: '05 / Field Log', href: '#field-log' },
+  { name: '06 / Membership', href: '#pricing' },
+  { name: '07 / Reviews', href: '#testimonials' },
+  { name: '08 / Zone', href: '#areas' },
+  { name: '09 / FAQ', href: '#faq' },
+];
+
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -94,21 +106,24 @@ export const Header = () => {
                 <Menu className="h-6 w-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full bg-background border-l-2 border-black rounded-none">
-              <div className="flex flex-col h-full py-12 px-6 space-y-8">
-                {navItems.map((item) => (
+            <SheetContent side="right" className="w-full bg-background border-l-2 border-black rounded-none flex flex-col">
+              <div className="flex flex-col flex-1 py-12 px-6 space-y-4 overflow-y-auto">
+                {mobileNavItems.map((item) => (
                   <SheetClose key={item.name} asChild>
                     <Link
                       href={item.href}
-                      className="text-4xl font-headline border-b border-black pb-4 uppercase"
+                      className="text-2xl font-headline border-b border-black/10 pb-2 uppercase tracking-tight hover:text-primary transition-colors"
                     >
                       {item.name}
                     </Link>
                   </SheetClose>
                 ))}
-                <a href={`tel:${COMPANY_INFO.phone}`} className="text-2xl font-code uppercase font-bold text-primary">
-                  {COMPANY_INFO.phone}
-                </a>
+                <div className="pt-8">
+                   <a href={`tel:${COMPANY_INFO.phone}`} className="text-2xl font-code uppercase font-bold text-primary">
+                    {COMPANY_INFO.phone}
+                  </a>
+                  <p className="text-[10px] font-code uppercase text-muted-foreground mt-2">24/7 EMERGENCY DISPATCH</p>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

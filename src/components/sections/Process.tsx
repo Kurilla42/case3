@@ -31,7 +31,7 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section className="py-24 bg-background overflow-hidden border-b border-black">
+    <section id="process" className="py-24 bg-background overflow-hidden border-b border-black">
       <div className="container mx-auto px-4 max-w-[1400px]">
         {/* Header Block */}
         <div className="mb-20 space-y-8">

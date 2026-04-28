@@ -53,7 +53,13 @@ export const Hero = () => {
           </div>
 
           <div className="pt-8">
-            <p className="font-code text-[13px] font-medium text-graphite uppercase tracking-widest">
+            {/* Mobile: 2 lines, no dot between Insured and BBB */}
+            <p className="md:hidden font-code text-[13px] font-medium text-graphite uppercase tracking-widest">
+              LIC #MN-PC042881 · INSURED $1M<br />
+              BBB A+ · PHCC MEMBER
+            </p>
+            {/* Desktop: Original layout */}
+            <p className="hidden md:block font-code text-[13px] font-medium text-graphite uppercase tracking-widest">
               LIC #MN-PC042881  ·  INSURED $1M  ·  BBB A+  ·  PHCC MEMBER
             </p>
           </div>
