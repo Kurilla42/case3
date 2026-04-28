@@ -39,7 +39,8 @@ export const Header = () => {
   useEffect(() => {
     setMounted(true);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Increased threshold to 50px to prevent jitter near top of page
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -52,11 +53,15 @@ export const Header = () => {
 
   return (
     <motion.header
-      className="sticky top-0 z-50 w-full border-b border-black bg-background"
+      className="sticky top-0 z-50 w-full border-b border-black bg-background overflow-hidden"
+      initial={false}
       animate={{
-        height: isScrolled ? '64px' : '96px',
+        height: isScrolled ? '72px' : '96px',
       }}
-      transition={{ duration: 0.2 }}
+      transition={{ 
+        duration: 0.3, 
+        ease: [0.4, 0, 0.2, 1] // Custom cubic-bezier for smoother motion
+      }}
     >
       <div className="container mx-auto px-4 h-full flex items-center justify-between">
         <div className="flex flex-col">
