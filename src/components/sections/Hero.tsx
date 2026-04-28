@@ -53,10 +53,10 @@ export const Hero = () => {
           </div>
 
           <div className="pt-8">
-            {/* Mobile: 2 lines, no dot between Insured and BBB */}
+            {/* Mobile: 2 lines, swapped Insured and BBB */}
             <p className="md:hidden font-code text-[13px] font-medium text-graphite uppercase tracking-widest">
-              LIC #MN-PC042881 · INSURED $1M<br />
-              BBB A+ · PHCC MEMBER
+              LIC #MN-PC042881 · BBB A+<br />
+              INSURED $1M · PHCC MEMBER
             </p>
             {/* Desktop: Original layout */}
             <p className="hidden md:block font-code text-[13px] font-medium text-graphite uppercase tracking-widest">
