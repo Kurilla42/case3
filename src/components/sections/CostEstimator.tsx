@@ -70,25 +70,25 @@ export const CostEstimator = () => {
           </div>
 
           {/* Right Side: Selection & Results */}
-          <div className="space-y-10 md:space-y-12 w-full">
+          <div className="space-y-10 md:space-y-12 w-full overflow-hidden">
             
             {/* Row 1: What's Happening */}
             <div className="space-y-4">
               <p className="font-code text-[10px] uppercase font-black text-muted-foreground tracking-widest">WHAT'S HAPPENING?</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                 {ESTIMATE_DATA.issues.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleSelect('issue', item.id)}
                     className={cn(
-                      "p-4 border border-black text-left transition-all",
+                      "p-3 sm:p-4 border border-black text-left transition-all min-w-0 flex flex-col justify-between",
                       selections.issue === item.id 
                         ? "bg-primary text-white shadow-none" 
-                        : "bg-white text-black hover:bg-muted shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                        : "bg-white text-black hover:bg-muted shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                     )}
                   >
-                    <p className="font-headline text-[11px] uppercase leading-none mb-1">{item.label}</p>
-                    <p className={cn("font-code text-[9px] uppercase font-black", selections.issue === item.id ? "text-white/60" : "text-muted-foreground")}>
+                    <p className="font-headline text-[10px] sm:text-[11px] uppercase leading-tight mb-1 break-words">{item.label}</p>
+                    <p className={cn("font-code text-[8px] sm:text-[9px] uppercase font-black", selections.issue === item.id ? "text-white/60" : "text-muted-foreground")}>
                       {item.sub}
                     </p>
                   </button>
@@ -99,20 +99,20 @@ export const CostEstimator = () => {
             {/* Row 2: Home Size */}
             <div className="space-y-4">
               <p className="font-code text-[10px] uppercase font-black text-muted-foreground tracking-widest">HOME SIZE</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                 {ESTIMATE_DATA.homeSizes.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleSelect('homeSize', item.id)}
                     className={cn(
-                      "p-4 border border-black text-left transition-all",
+                      "p-3 sm:p-4 border border-black text-left transition-all min-w-0 flex flex-col justify-between",
                       selections.homeSize === item.id 
                         ? "bg-primary text-white shadow-none" 
-                        : "bg-white text-black hover:bg-muted shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                        : "bg-white text-black hover:bg-muted shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                     )}
                   >
-                    <p className="font-headline text-[11px] uppercase leading-none mb-1">{item.label}</p>
-                    <p className={cn("font-code text-[9px] uppercase font-black", selections.homeSize === item.id ? "text-white/60" : "text-muted-foreground")}>
+                    <p className="font-headline text-[10px] sm:text-[11px] uppercase leading-tight mb-1 break-words">{item.label}</p>
+                    <p className={cn("font-code text-[8px] sm:text-[9px] uppercase font-black", selections.homeSize === item.id ? "text-white/60" : "text-muted-foreground")}>
                       {item.sub}
                     </p>
                   </button>
@@ -123,20 +123,20 @@ export const CostEstimator = () => {
             {/* Row 3: Urgency */}
             <div className="space-y-4">
               <p className="font-code text-[10px] uppercase font-black text-muted-foreground tracking-widest">URGENCY</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
                 {ESTIMATE_DATA.urgency.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleSelect('urgency', item.id)}
                     className={cn(
-                      "p-4 border border-black text-left transition-all",
+                      "p-3 sm:p-4 border border-black text-left transition-all min-w-0 flex flex-col justify-between",
                       selections.urgency === item.id 
                         ? "bg-primary text-white shadow-none" 
-                        : "bg-white text-black hover:bg-muted shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                        : "bg-white text-black hover:bg-muted shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
                     )}
                   >
-                    <p className="font-headline text-[11px] uppercase leading-none mb-1">{item.label}</p>
-                    <p className={cn("font-code text-[9px] uppercase font-black", selections.urgency === item.id ? "text-white/60" : "text-muted-foreground")}>
+                    <p className="font-headline text-[10px] sm:text-[11px] uppercase leading-tight mb-1 break-words">{item.label}</p>
+                    <p className={cn("font-code text-[8px] sm:text-[9px] uppercase font-black", selections.urgency === item.id ? "text-white/60" : "text-muted-foreground")}>
                       {item.sub}
                     </p>
                   </button>
@@ -151,12 +151,12 @@ export const CostEstimator = () => {
                 <p className="font-code text-[10px] uppercase font-black text-primary tracking-widest">±12% ACCURACY</p>
               </div>
 
-              <div className="mb-8">
-                <h4 className="font-headline text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-tighter leading-none mb-2">
+              <div className="mb-8 overflow-hidden">
+                <h4 className="font-headline text-2xl xs:text-3xl sm:text-5xl md:text-6xl tracking-tighter leading-none mb-2 break-words">
                   ${priceRange[0]} <span className="text-primary">—</span> ${priceRange[1]}
                 </h4>
                 <div className="w-full h-[1px] bg-black/10 my-4" />
-                <div className="flex flex-col sm:flex-row justify-between gap-2 font-code text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">
+                <div className="flex flex-col sm:flex-row justify-between gap-2 font-code text-[9px] sm:text-[10px] uppercase font-black text-muted-foreground/60 tracking-widest">
                   <span>MOST CUSTOMERS PAY: ${priceRange[2]}</span>
                   <span className="hidden sm:inline">INCLUDES LABOR + COMMON PARTS</span>
                 </div>
@@ -164,7 +164,7 @@ export const CostEstimator = () => {
 
               <Button 
                 onClick={handleBook}
-                className="w-full h-16 bg-primary text-white font-headline text-lg uppercase tracking-wide rounded-none border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-primary/90 active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
+                className="w-full h-14 sm:h-16 bg-primary text-white font-headline text-base sm:text-lg uppercase tracking-wide rounded-none border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-primary/90 active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all"
               >
                 LOCK IN THIS PRICE NOW™
               </Button>
