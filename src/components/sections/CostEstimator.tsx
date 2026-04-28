@@ -42,9 +42,9 @@ export const CostEstimator = () => {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-background border-y border-black">
+    <section id="pricing" className="py-24 bg-background border-y border-black overflow-x-hidden">
       <div className="container mx-auto px-4">
-        <div className="border border-black p-6 md:p-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="border border-black p-4 sm:p-8 md:p-16 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* Left Side: Info */}
           <div className="space-y-10">
@@ -60,7 +60,7 @@ export const CostEstimator = () => {
               </p>
             </div>
 
-            <div className="border border-black p-6 bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-md">
+            <div className="border border-black p-6 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-md">
               <p className="font-code text-[11px] uppercase font-black tracking-widest text-primary mb-2">PROMO OFFER</p>
               <h3 className="font-headline text-lg uppercase mb-2">$50 BACK IN YOUR POCKET.</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
@@ -70,7 +70,7 @@ export const CostEstimator = () => {
           </div>
 
           {/* Right Side: Selection & Results */}
-          <div className="space-y-10 md:space-y-12">
+          <div className="space-y-10 md:space-y-12 w-full">
             
             {/* Row 1: What's Happening */}
             <div className="space-y-4">
@@ -145,14 +145,14 @@ export const CostEstimator = () => {
             </div>
 
             {/* Result Box */}
-            <div className="bg-[#EAE3D2] border border-black p-6 md:p-8 relative shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <div className="bg-[#EAE3D2] border border-black p-5 sm:p-8 relative shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
               <div className="flex justify-between items-start mb-6">
                 <p className="font-code text-[10px] uppercase font-black text-muted-foreground tracking-widest">TYPICAL PRICE RANGE</p>
                 <p className="font-code text-[10px] uppercase font-black text-primary tracking-widest">±12% ACCURACY</p>
               </div>
 
               <div className="mb-8">
-                <h4 className="font-headline text-4xl sm:text-5xl md:text-6xl tracking-tighter leading-none mb-2">
+                <h4 className="font-headline text-3xl xs:text-4xl sm:text-5xl md:text-6xl tracking-tighter leading-none mb-2">
                   ${priceRange[0]} <span className="text-primary">—</span> ${priceRange[1]}
                 </h4>
                 <div className="w-full h-[1px] bg-black/10 my-4" />
